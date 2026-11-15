@@ -1,4 +1,4 @@
-# 日本語 lernen – Japanese Learning Site
+# 日本語 – Japanese Learning Site
 
 Interactive homepage for learning Japanese (JLPT N5–N1): multiple-choice
 questions with instant feedback, filters by module and level, and a
