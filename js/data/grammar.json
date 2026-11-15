@@ -1,0 +1,432 @@
+[
+  {
+    "id": "grammar-n5-001",
+    "type": "mc",
+    "level": "N5",
+    "tags": ["x-ha-y-desu"],
+    "question": "くるま は くろい です。",
+    "options": [
+      "Das Auto ist schwarz.",
+      "Das Auto ist blau.",
+      "Der Stift ist schwarz.",
+      "Das Auto ist kein Auto."
+    ],
+    "answer": "Das Auto ist schwarz.",
+    "explanation": "X は Y です = X ist Y. くろい = schwarz."
+  },
+  {
+    "id": "grammar-n5-002",
+    "type": "mc",
+    "level": "N5",
+    "tags": ["x-ha-y-desu"],
+    "question": "そら は あおい です。",
+    "options": [
+      "Der Himmel ist blau.",
+      "Das Auto ist blau.",
+      "Der Himmel ist rot.",
+      "Der Stift ist blau."
+    ],
+    "answer": "Der Himmel ist blau.",
+    "explanation": "そら = Himmel, あおい = blau."
+  },
+  {
+    "id": "grammar-n5-003",
+    "type": "mc",
+    "level": "N5",
+    "tags": ["x-ha-y-desu"],
+    "question": "ぺん は あかい です。",
+    "options": [
+      "Der Stift ist rot.",
+      "Der Stift ist blau.",
+      "Das Auto ist rot.",
+      "Die Haare sind rot."
+    ],
+    "answer": "Der Stift ist rot.",
+    "explanation": "ぺん = Stift, あかい = rot."
+  },
+  {
+    "id": "grammar-n5-004",
+    "type": "mc",
+    "level": "N5",
+    "tags": ["x-ha-y-desu"],
+    "question": "いぬ は ちゃいろ です。",
+    "options": [
+      "Der Hund ist braun.",
+      "Die Katze ist braun.",
+      "Der Hund ist schwarz.",
+      "Der Vogel ist braun."
+    ],
+    "answer": "Der Hund ist braun.",
+    "explanation": "いぬ = Hund, ちゃいろ = braun."
+  },
+  {
+    "id": "grammar-n5-005",
+    "type": "mc",
+    "level": "N5",
+    "tags": ["x-ha-y-desu"],
+    "question": "とり は ちゃいろ です。",
+    "options": [
+      "Der Vogel ist braun.",
+      "Der Hund ist braun.",
+      "Der Vogel ist blau.",
+      "Der Vogel ist kein Hund."
+    ],
+    "answer": "Der Vogel ist braun.",
+    "explanation": "とり = Vogel."
+  },
+  {
+    "id": "grammar-n5-006",
+    "type": "mc",
+    "level": "N5",
+    "tags": ["x-ha-y-desu", "zeit"],
+    "question": "いま は ろくじ です。",
+    "options": [
+      "Es ist jetzt 6 Uhr.",
+      "Es ist jetzt 6 Jahre.",
+      "Ich bin 6 Jahre alt.",
+      "Jetzt kommt der Lehrer."
+    ],
+    "answer": "Es ist jetzt 6 Uhr.",
+    "explanation": "ろく じ = 6 Uhr. Auch Uhrzeiten folgen dem Muster X は Y です."
+  },
+  {
+    "id": "grammar-n5-007",
+    "type": "mc",
+    "level": "N5",
+    "tags": ["x-ha-y-desu"],
+    "question": "Wie sagt man „Das Auto ist schwarz“ auf Japanisch?",
+    "options": [
+      "くるま は くろい です。",
+      "くろい は くるま です。",
+      "くるま は くろい じゃない です。",
+      "くるま の くろい です。"
+    ],
+    "answer": "くるま は くろい です。",
+    "explanation": "Thema (くるま) + は + Prädikat (くろい) + です. の passt hier nicht, じゃない です ist die Verneinung."
+  },
+  {
+    "id": "grammar-n5-008",
+    "type": "mc",
+    "level": "N5",
+    "tags": ["no"],
+    "question": "Wie sagt man „der Lehrer meines Freundes“ auf Japanisch?",
+    "options": [
+      "ともだち の せんせい",
+      "せんせい の ともだち",
+      "ともだち は せんせい です",
+      "せんせい は ともだち です"
+    ],
+    "answer": "ともだち の せんせい",
+    "explanation": "の = von: ともだち (Freund) の せんせい (Lehrer). Umgekehrte Reihenfolge = der Freund des Lehrers."
+  },
+  {
+    "id": "grammar-n5-009",
+    "type": "mc",
+    "level": "N5",
+    "tags": ["no"],
+    "question": "Wie sagt man „das Buch über Autos“ auf Japanisch?",
+    "options": [
+      "くるま の ほん",
+      "ほん の くるま",
+      "くるま は ほん です",
+      "ほん は くるま です"
+    ],
+    "answer": "くるま の ほん",
+    "explanation": "Das erste Nomen beschreibt das zweite: くるま の ほん = das Autobuch."
+  },
+  {
+    "id": "grammar-n5-010",
+    "type": "mc",
+    "level": "N5",
+    "tags": ["no"],
+    "question": "Was bedeutet かれ の ほん?",
+    "options": [
+      "sein Buch",
+      "das Buch über Autos",
+      "ihr Buch",
+      "ein Buch für ihn"
+    ],
+    "answer": "sein Buch",
+    "explanation": "かれ = er → かれ の ほん = das Buch von ihm."
+  },
+  {
+    "id": "grammar-n5-011",
+    "type": "mc",
+    "level": "N5",
+    "tags": ["no", "x-ha-y-desu"],
+    "question": "わたし の かみ は あおい です。",
+    "options": [
+      "Meine Haare sind blau.",
+      "Mein Buch ist blau.",
+      "Das Auto ist blau.",
+      "Seine Haare sind blau."
+    ],
+    "answer": "Meine Haare sind blau.",
+    "explanation": "わたし の かみ = meine Haare; は ... です schließt den Satz ab."
+  },
+  {
+    "id": "grammar-n5-012",
+    "type": "mc",
+    "level": "N5",
+    "tags": ["demonstrativ"],
+    "question": "Was bedeutet これ?",
+    "options": [
+      "das hier (nahe beim Sprecher)",
+      "das da (nahe beim Gesprächspartner)",
+      "das dort hinten (weit weg von beiden)",
+      "welches"
+    ],
+    "answer": "das hier (nahe beim Sprecher)",
+    "explanation": "これ = das hier, それ = das da beim Partner, あれ = das dort hinten, どれ = welches."
+  },
+  {
+    "id": "grammar-n5-013",
+    "type": "mc",
+    "level": "N5",
+    "tags": ["demonstrativ"],
+    "question": "Was bedeutet それ?",
+    "options": [
+      "das da (nahe beim Gesprächspartner)",
+      "das hier (nahe beim Sprecher)",
+      "das dort hinten (weit weg von beiden)",
+      "wo"
+    ],
+    "answer": "das da (nahe beim Gesprächspartner)",
+    "explanation": "そ bezieht sich immer auf die Seite des Gesprächspartners."
+  },
+  {
+    "id": "grammar-n5-014",
+    "type": "mc",
+    "level": "N5",
+    "tags": ["demonstrativ"],
+    "question": "Was bedeutet あれ?",
+    "options": [
+      "das dort hinten (weit weg von beiden)",
+      "das hier (nahe beim Sprecher)",
+      "das da (nahe beim Gesprächspartner)",
+      "welches"
+    ],
+    "answer": "das dort hinten (weit weg von beiden)",
+    "explanation": "あ = weit weg: あれ (das da hinten), あの (jenes), あそこ (dort hinten)."
+  },
+  {
+    "id": "grammar-n5-015",
+    "type": "mc",
+    "level": "N5",
+    "tags": ["demonstrativ", "frage"],
+    "question": "Was bedeutet どれ?",
+    "options": ["welches (alleinstehend)", "dieses", "das da", "wo"],
+    "answer": "welches (alleinstehend)",
+    "explanation": "どれ = welches von mehreren. Vor einem Nomen sagt man どの (どの ぺん = welcher Stift)."
+  },
+  {
+    "id": "grammar-n5-016",
+    "type": "mc",
+    "level": "N5",
+    "tags": ["demonstrativ", "frage"],
+    "question": "Was bedeutet どの?",
+    "options": [
+      "welches (steht direkt vor dem Nomen)",
+      "welches (alleinstehend)",
+      "wo",
+      "wer"
+    ],
+    "answer": "welches (steht direkt vor dem Nomen)",
+    "explanation": "この/その/あの/どの sind dieAttribut-Formen: どの くるま = welches Auto."
+  },
+  {
+    "id": "grammar-n5-017",
+    "type": "mc",
+    "level": "N5",
+    "tags": ["demonstrativ", "ort"],
+    "question": "Was bedeutet ここ?",
+    "options": [
+      "hier (Ort nahe beim Sprecher)",
+      "dort (Ort beim Gesprächspartner)",
+      "dort hinten (Ort weit weg)",
+      "wo"
+    ],
+    "answer": "hier (Ort nahe beim Sprecher)",
+    "explanation": "ここ/そこ/あそこ sind Orte: ここ = hier, そこ = dort bei dir, あそこ = dort hinten."
+  },
+  {
+    "id": "grammar-n5-018",
+    "type": "mc",
+    "level": "N5",
+    "tags": ["demonstrativ", "ort"],
+    "question": "Was bedeutet あそこ?",
+    "options": [
+      "dort hinten (Ort weit weg von beiden)",
+      "hier (nahe beim Sprecher)",
+      "dort (nahe beim Gesprächspartner)",
+      "welches"
+    ],
+    "answer": "dort hinten (Ort weit weg von beiden)",
+    "explanation": "あそこ bezeichnet einen Ort, der von beiden weit weg ist."
+  },
+  {
+    "id": "grammar-n5-019",
+    "type": "mc",
+    "level": "N5",
+    "tags": ["demonstrativ", "ort", "frage"],
+    "question": "Was bedeutet どこ?",
+    "options": ["wo", "welches", "wer", "dort hinten"],
+    "answer": "wo",
+    "explanation": "どこ = wo? (Ortsfrage). どれ = welches (Ding), だれ = wer."
+  },
+  {
+    "id": "grammar-n5-020",
+    "type": "mc",
+    "level": "N5",
+    "tags": ["negation"],
+    "question": "これは ペン じゃない です。",
+    "options": [
+      "Das ist kein Stift.",
+      "Das ist ein Stift.",
+      "Ist das ein Stift?",
+      "Der Stift ist nicht hier."
+    ],
+    "answer": "Das ist kein Stift.",
+    "explanation": "Nomen + じゃない です = ist kein Nomen. Formeller: じゃありません."
+  },
+  {
+    "id": "grammar-n5-021",
+    "type": "mc",
+    "level": "N5",
+    "tags": ["frage"],
+    "question": "Wie fragt man „Ist das ein Hund?“ auf Japanisch?",
+    "options": [
+      "これは いぬ です か。",
+      "いぬ は これ です。",
+      "これ の いぬ です。",
+      "これは いぬ じゃない です。"
+    ],
+    "answer": "これは いぬ です か。",
+    "explanation": "か am Satzende macht die Frage; これ ist das Thema: これ は いぬ です か."
+  },
+  {
+    "id": "grammar-n5-022",
+    "type": "mc",
+    "level": "N5",
+    "tags": ["negation"],
+    "question": "やまださん は がくせい じゃない です。",
+    "options": [
+      "Herr Yamada ist kein Student.",
+      "Herr Yamada ist Student.",
+      "Ist Herr Yamada Student?",
+      "Herr Yamada ist kein Lehrer."
+    ],
+    "answer": "Herr Yamada ist kein Student.",
+    "explanation": "Nomen 1 は Nomen 2 じゃない です = Nomen 1 ist kein Nomen 2."
+  },
+  {
+    "id": "grammar-n5-023",
+    "type": "mc",
+    "level": "N5",
+    "tags": ["negation"],
+    "question": "これは にほんご じゃありません。",
+    "options": [
+      "Das ist nicht Japanisch.",
+      "Das ist kein Japaner.",
+      "Ist das Japanisch?",
+      "Das Japanisch ist nicht hier."
+    ],
+    "answer": "Das ist nicht Japanisch.",
+    "explanation": "じゃありません ist die formellere Version von じゃない です – Bedeutung identisch."
+  },
+  {
+    "id": "grammar-n5-024",
+    "type": "mc",
+    "level": "N5",
+    "tags": ["ne-yo"],
+    "question": "Was drückt ね am Satzende aus?",
+    "options": [
+      "Es erwartet die Zustimmung des Gesprächspartners („…, ne?“ / „…, oder?“)",
+      "Es verstärkt die Aussage wie ein Ausrufezeichen",
+      "Es verneint den Satz",
+      "Es macht den Satz zu einer Frage nach einem Ort"
+    ],
+    "answer": "Es erwartet die Zustimmung des Gesprächspartners („…, ne?“ / „…, oder?“)",
+    "explanation": "ね = „ne? / oder?“ (いぬ は かわいい です ね). Für Verstärkung benutzt man よ."
+  },
+  {
+    "id": "grammar-n5-025",
+    "type": "mc",
+    "level": "N5",
+    "tags": ["ne-yo"],
+    "question": "Was drückt よ am Satzende aus?",
+    "options": [
+      "Es verstärkt die Aussage, ähnlich wie ein Ausrufezeichen",
+      "Es erwartet Zustimmung („…, ne?“)",
+      "Es verneint den Satz",
+      "Es markiert das direkte Objekt"
+    ],
+    "answer": "Es verstärkt die Aussage, ähnlich wie ein Ausrufezeichen",
+    "explanation": "よ betont die eigene Aussage: これは にく です よ! = Das IST Fleisch!"
+  },
+  {
+    "id": "grammar-n5-026",
+    "type": "mc",
+    "level": "N5",
+    "tags": ["iru-arimasu"],
+    "question": "いぬ は いえ に ___。 – Der Hund ist im Haus.",
+    "options": ["います", "あります", "です", "ました"],
+    "answer": "います",
+    "explanation": "います = existieren für Lebewesen (Menschen, Tiere). あります nur für Gegenstände."
+  },
+  {
+    "id": "grammar-n5-027",
+    "type": "mc",
+    "level": "N5",
+    "tags": ["iru-arimasu"],
+    "question": "くるま は そこ に ___。 – Das Auto ist dort.",
+    "options": ["あります", "います", "です", "しません"],
+    "answer": "あります",
+    "explanation": "あります = existieren für Nicht-Lebewesen (Dinge, Autos, Pflanzen als Dinge)."
+  },
+  {
+    "id": "grammar-n5-028",
+    "type": "mc",
+    "level": "N5",
+    "tags": ["selbstvorstellung"],
+    "question": "なんさい です か。",
+    "options": [
+      "Wie alt bist du?",
+      "Wie ist dein Name?",
+      "Woher kommst du?",
+      "Was sind deine Hobbys?"
+    ],
+    "answer": "Wie alt bist du?",
+    "explanation": "なん さい = wie viele Jahre (Alt). さい = Jahre alt (als Zähleinheit)."
+  },
+  {
+    "id": "grammar-n5-029",
+    "type": "mc",
+    "level": "N5",
+    "tags": ["selbstvorstellung"],
+    "question": "しゅみ は なん です か。",
+    "options": [
+      "Was sind deine Hobbys?",
+      "Was ist dein Name?",
+      "Woher kommst du?",
+      "Welches Studienjahr bist du?"
+    ],
+    "answer": "Was sind deine Hobbys?",
+    "explanation": "しゅみ = Hobby, なん = was: wörtlich „Was betrifft Hobbys, was ist es?“"
+  },
+  {
+    "id": "grammar-n5-030",
+    "type": "mc",
+    "level": "N5",
+    "tags": ["selbstvorstellung"],
+    "question": "どこ の しゅっしん です か。",
+    "options": [
+      "Woher kommst du?",
+      "Wo wohnst du?",
+      "Wohin gehst du?",
+      "Wo ist der Bahnhof?"
+    ],
+    "answer": "Woher kommst du?",
+    "explanation": "しゅっしん = Herkunft: どこの出身ですか = aus welcher Gegend stammst du?"
+  }
+]

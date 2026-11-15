@@ -1,0 +1,252 @@
+[
+  {
+    "id": "vocab-n5-001",
+    "type": "mc",
+    "level": "N5",
+    "tags": ["farben"],
+    "question": "Was bedeutet あおい?",
+    "options": ["blau", "rot", "schwarz", "weiß"],
+    "answer": "blau",
+    "explanation": "あおい = blau (i-Adjektiv). Nicht verwechseln mit あかい = rot."
+  },
+  {
+    "id": "vocab-n5-002",
+    "type": "mc",
+    "level": "N5",
+    "tags": ["farben"],
+    "question": "Was bedeutet あかい?",
+    "options": ["rot", "blau", "braun", "weiß"],
+    "answer": "rot",
+    "explanation": "あかい = rot (あか = Rot, die Farbe)."
+  },
+  {
+    "id": "vocab-n5-003",
+    "type": "mc",
+    "level": "N5",
+    "tags": ["farben"],
+    "question": "Was bedeutet くろい?",
+    "options": ["schwarz", "braun", "blau", "rot"],
+    "answer": "schwarz",
+    "explanation": "くろい = schwarz (くろ = Schwarz)."
+  },
+  {
+    "id": "vocab-n5-004",
+    "type": "mc",
+    "level": "N5",
+    "tags": ["farben"],
+    "question": "Was bedeutet ちゃいろ?",
+    "options": ["braun", "schwarz", "blau", "gelb"],
+    "answer": "braun",
+    "explanation": "ちゃいろ = braun (wörtl. „Tee-Farbe“). ちゃいろ ist ein Nomen → ちゃいろ の いぬ."
+  },
+  {
+    "id": "vocab-n5-005",
+    "type": "mc",
+    "level": "N5",
+    "tags": ["farben"],
+    "question": "Was bedeutet しろい?",
+    "options": ["weiß", "schwarz", "rot", "blau"],
+    "answer": "weiß",
+    "explanation": "しろい = weiß (しろ = Weiß)."
+  },
+  {
+    "id": "vocab-n5-006",
+    "type": "mc",
+    "level": "N5",
+    "tags": ["tiere"],
+    "question": "Was bedeutet いぬ?",
+    "options": ["Hund", "Katze", "Vogel", "Pferd"],
+    "answer": "Hund",
+    "explanation": "いぬ = Hund, ねこ = Katze."
+  },
+  {
+    "id": "vocab-n5-007",
+    "type": "mc",
+    "level": "N5",
+    "tags": ["tiere"],
+    "question": "Was bedeutet ねこ?",
+    "options": ["Katze", "Hund", "Fisch", "Vogel"],
+    "answer": "Katze",
+    "explanation": "ねこ = Katze. ねこ は かわいい です ね = Katzen sind süß, ne?"
+  },
+  {
+    "id": "vocab-n5-008",
+    "type": "mc",
+    "level": "N5",
+    "tags": ["tiere"],
+    "question": "Was bedeutet とり?",
+    "options": ["Vogel", "Katze", "Hund", "Fisch"],
+    "answer": "Vogel",
+    "explanation": "とり = Vogel. とり は にわ に います = der Vogel ist im Garten."
+  },
+  {
+    "id": "vocab-n5-009",
+    "type": "mc",
+    "level": "N5",
+    "tags": ["tiere"],
+    "question": "Was bedeutet さかな?",
+    "options": ["Fisch", "Vogel", "Katze", "Pferd"],
+    "answer": "Fisch",
+    "explanation": "さかな = Fisch. さかな を たべます = ich esse Fisch."
+  },
+  {
+    "id": "vocab-n5-010",
+    "type": "mc",
+    "level": "N5",
+    "tags": ["tiere"],
+    "question": "Was bedeutet うま?",
+    "options": ["Pferd", "Hund", "Vogel", "Kuh"],
+    "answer": "Pferd",
+    "explanation": "うま = Pferd. うま は かわいい です = Pferde sind süß."
+  },
+  {
+    "id": "vocab-n5-011",
+    "type": "mc",
+    "level": "N5",
+    "tags": ["gegenstaende"],
+    "question": "Was bedeutet ペン?",
+    "options": ["Stift", "Buch", "Tasche", "Schlüssel"],
+    "answer": "Stift",
+    "explanation": "ペン = Stift (von „Pen“). これは ペン です = das ist ein Stift."
+  },
+  {
+    "id": "vocab-n5-012",
+    "type": "mc",
+    "level": "N5",
+    "tags": ["gegenstaende"],
+    "question": "Was bedeutet ほん?",
+    "options": ["Buch", "Stift", "Auto", "Haare"],
+    "answer": "Buch",
+    "explanation": "ほん = Buch. くるま の ほん = das Autobuch."
+  },
+  {
+    "id": "vocab-n5-013",
+    "type": "mc",
+    "level": "N5",
+    "tags": ["gegenstaende"],
+    "question": "Was bedeutet くるま?",
+    "options": ["Auto", "Fahrrad", "Buch", "Park"],
+    "answer": "Auto",
+    "explanation": "くるま = Auto, じてんしゃ = Fahrrad."
+  },
+  {
+    "id": "vocab-n5-014",
+    "type": "mc",
+    "level": "N5",
+    "tags": ["gegenstaende"],
+    "question": "Was bedeutet くつ?",
+    "options": ["Schuhe", "Schlüssel", "Hut", "Haare"],
+    "answer": "Schuhe",
+    "explanation": "くつ = Schuhe. わたし の くつ = meine Schuhe."
+  },
+  {
+    "id": "vocab-n5-015",
+    "type": "mc",
+    "level": "N5",
+    "tags": ["gegenstaende"],
+    "question": "Was bedeutet かぎ?",
+    "options": ["Schlüssel", "Schuhe", "Buch", "Tasche"],
+    "answer": "Schlüssel",
+    "explanation": "かぎ = Schlüssel. これは あなた の かぎ です か = ist das dein Schlüssel?"
+  },
+  {
+    "id": "vocab-n5-016",
+    "type": "mc",
+    "level": "N5",
+    "tags": ["gegenstaende"],
+    "question": "Was bedeutet じてんしゃ?",
+    "options": ["Fahrrad", "Auto", "Bahn", "Park"],
+    "answer": "Fahrrad",
+    "explanation": "じてんしゃ = Fahrrad (wörtl. „Selbst-Dreh-Wagen“)."
+  },
+  {
+    "id": "vocab-n5-017",
+    "type": "mc",
+    "level": "N5",
+    "tags": ["orte"],
+    "question": "Was bedeutet にわ?",
+    "options": ["Garten", "Haus", "Park", "Dach"],
+    "answer": "Garten",
+    "explanation": "にわ = Garten. いぬ は にわ に います = der Hund ist im Garten."
+  },
+  {
+    "id": "vocab-n5-018",
+    "type": "mc",
+    "level": "N5",
+    "tags": ["orte"],
+    "question": "Was bedeutet こうえん?",
+    "options": ["Park", "Garten", "Schule", "Bahnhof"],
+    "answer": "Park",
+    "explanation": "こうえん = Park (öffentlicher Park), にわ = Garten (bei einem Haus)."
+  },
+  {
+    "id": "vocab-n5-019",
+    "type": "mc",
+    "level": "N5",
+    "tags": ["orte"],
+    "question": "Was bedeutet やね?",
+    "options": ["Dach", "Garten", "Haus", "Park"],
+    "answer": "Dach",
+    "explanation": "やね = Dach. ねこ は やね に います = die Katze ist auf dem Dach."
+  },
+  {
+    "id": "vocab-n5-020",
+    "type": "mc",
+    "level": "N5",
+    "tags": ["koerper"],
+    "question": "Was bedeutet かみ?",
+    "options": ["Haare", "Zähne", "Hände", "Buch"],
+    "answer": "Haare",
+    "explanation": "かみ = Haare. わたし の かみ は くろい です = meine Haare sind schwarz."
+  },
+  {
+    "id": "vocab-n5-021",
+    "type": "mc",
+    "level": "N5",
+    "tags": ["menschen"],
+    "question": "Was bedeutet せんせい?",
+    "options": ["Lehrer/-in", "Schüler/-in", "Freund/-in", "Student/-in"],
+    "answer": "Lehrer/-in",
+    "explanation": "せんせい = Lehrer. ともだち の せんせい = der Lehrer meines Freundes."
+  },
+  {
+    "id": "vocab-n5-022",
+    "type": "mc",
+    "level": "N5",
+    "tags": ["menschen"],
+    "question": "Was bedeutet ともだち?",
+    "options": ["Freund/-in", "Lehrer/-in", "Schüler/-in", "Familie"],
+    "answer": "Freund/-in",
+    "explanation": "ともだち = Freund/Freundin. ともだち の いぬ = der Hund des Freundes."
+  },
+  {
+    "id": "vocab-n5-023",
+    "type": "mc",
+    "level": "N5",
+    "tags": ["adjektive"],
+    "question": "Was bedeutet かわいい?",
+    "options": ["süß / niedlich", "gruselig", "lustig", "lecker"],
+    "answer": "süß / niedlich",
+    "explanation": "かわいい = süß (i-Adjektiv). あの こ は かわいい です ね = das Kind ist süß, ne?"
+  },
+  {
+    "id": "vocab-n5-024",
+    "type": "mc",
+    "level": "N5",
+    "tags": ["natur"],
+    "question": "Was bedeutet そら?",
+    "options": ["Himmel", "Meer", "Garten", "Sonne"],
+    "answer": "Himmel",
+    "explanation": "そら = Himmel. そら は あおい です = der Himmel ist blau."
+  },
+  {
+    "id": "vocab-n5-025",
+    "type": "mc",
+    "level": "N5",
+    "tags": ["adjektive"],
+    "question": "Was bedeutet こわい?",
+    "options": ["gruselig / unheimlich", "süß", "lustig", "traurig"],
+    "answer": "gruselig / unheimlich",
+    "explanation": "こわい = gruselig/unheimlich (i-Adjektiv). ねこ は こわい です か = sind Katzen unheimlich?"
+  }
+]

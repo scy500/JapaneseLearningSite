@@ -1,0 +1,317 @@
+[
+  {
+    "id": "verbs-n5-001",
+    "type": "mc",
+    "level": "N5",
+    "tags": ["ru-verb", "negation"],
+    "question": "Wie lautet die Verneinung in der Grundform von たべる (essen)?",
+    "options": ["たべない", "たべらない", "たべません", "たべん"],
+    "answer": "たべない",
+    "explanation": "る-Verben: グundform-る einfach durch ない ersetzen: たべる → たべない."
+  },
+  {
+    "id": "verbs-n5-002",
+    "type": "mc",
+    "level": "N5",
+    "tags": ["ru-verb", "masu"],
+    "question": "Wie lautet die ます-Form (höflich) von たべる?",
+    "options": ["たべます", "たべります", "たべるます", "たべませ"],
+    "answer": "たべます",
+    "explanation": "る-Verben: る → ます. たべる → たべます."
+  },
+  {
+    "id": "verbs-n5-003",
+    "type": "mc",
+    "level": "N5",
+    "tags": ["ru-verb", "vergangenheit"],
+    "question": "Wie lautet die Vergangenheitsform (ます) von たべる?",
+    "options": [
+      "たべました",
+      "たべません",
+      "たべます",
+      "たべました じゃない です"
+    ],
+    "answer": "たべました",
+    "explanation": "ます → ました ist die regelmäßige Vergangenheit: たべました = ich habe gegessen."
+  },
+  {
+    "id": "verbs-n5-004",
+    "type": "mc",
+    "level": "N5",
+    "tags": ["ru-verb", "negation"],
+    "question": "Wie lautet die höfliche Verneinung von たべる?",
+    "options": ["たべません", "たべます", "たべました", "たべない です か"],
+    "answer": "たべません",
+    "explanation": "ます → ません: たべません = ich esse nicht."
+  },
+  {
+    "id": "verbs-n5-005",
+    "type": "mc",
+    "level": "N5",
+    "tags": ["ru-verb", "vergangenheit", "negation"],
+    "question": "Wie lautet die höfliche verneinte Vergangenheit von たべる?",
+    "options": [
+      "たべませんでした",
+      "たべません",
+      "たべました",
+      "たべなかった です"
+    ],
+    "answer": "たべませんでした",
+    "explanation": "ません → ませんでした: たべませんでした = ich habe nicht gegessen."
+  },
+  {
+    "id": "verbs-n5-006",
+    "type": "mc",
+    "level": "N5",
+    "tags": ["u-verb", "negation"],
+    "question": "Wie lautet die Verneinung (Grundform) von いく (gehen)?",
+    "options": ["いかない", "いきない", "いくない", "いない"],
+    "answer": "いかない",
+    "explanation": "う-Verben: u → a + ない (いく → いかない)."
+  },
+  {
+    "id": "verbs-n5-007",
+    "type": "mc",
+    "level": "N5",
+    "tags": ["u-verb", "masu"],
+    "question": "Wie lautet die ます-Form von いく?",
+    "options": ["いきます", "いくます", "いきません", "いきない"],
+    "answer": "いきます",
+    "explanation": "う-Verben: u → i + ます (いく → いきます)."
+  },
+  {
+    "id": "verbs-n5-008",
+    "type": "mc",
+    "level": "N5",
+    "tags": ["u-verb", "vergangenheit"],
+    "question": "Wie lautet die Vergangenheitsform (ます) von いく?",
+    "options": ["いきました", "いきません", "いきます", "いかない"],
+    "answer": "いきました",
+    "explanation": "いきます → いきました = ich bin gegangen."
+  },
+  {
+    "id": "verbs-n5-009",
+    "type": "mc",
+    "level": "N5",
+    "tags": ["u-verb", "negation"],
+    "question": "Wie lautet die Verneinung (Grundform) von のむ (trinken)?",
+    "options": ["のまない", "のみない", "のむない", "のんでない"],
+    "answer": "のまない",
+    "explanation": "む → ま + ない: のむ → のまない."
+  },
+  {
+    "id": "verbs-n5-010",
+    "type": "mc",
+    "level": "N5",
+    "tags": ["u-verb", "masu"],
+    "question": "Wie lautet die ます-Form von のむ?",
+    "options": ["のみます", "のむます", "のみません", "のみました"],
+    "answer": "のみます",
+    "explanation": "む → み + ます: のむ → のみます."
+  },
+  {
+    "id": "verbs-n5-011",
+    "type": "mc",
+    "level": "N5",
+    "tags": ["u-verb", "vergangenheit"],
+    "question": "Wie lautet die Vergangenheitsform (ます) von のむ?",
+    "options": ["のみました", "のむました", "のみます", "のみません"],
+    "answer": "のみました",
+    "explanation": "のみます → のみました = ich habe getrunken."
+  },
+  {
+    "id": "verbs-n5-012",
+    "type": "mc",
+    "level": "N5",
+    "tags": ["u-verb", "negation"],
+    "question": "Wie lautet die Verneinung (Grundform) von かう (kaufen)?",
+    "options": ["かわない", "かあない", "かうない", "かやない"],
+    "answer": "かわない",
+    "explanation": "Sonderregel bei Verben auf う: う → わ + ない (かう → かわない), nicht かあない."
+  },
+  {
+    "id": "verbs-n5-013",
+    "type": "mc",
+    "level": "N5",
+    "tags": ["u-verb", "negation"],
+    "question": "Wie lautet die Verneinung (Grundform) von うたう (singen)?",
+    "options": ["うたわない", "うたあない", "うたいない", "うたんない"],
+    "answer": "うたわない",
+    "explanation": "うたう endet auf う → うたわない (う wird zu わ, nie zu あ)."
+  },
+  {
+    "id": "verbs-n5-014",
+    "type": "mc",
+    "level": "N5",
+    "tags": ["u-verb", "masu"],
+    "question": "Wie lautet die ます-Form von うたう?",
+    "options": ["うたいます", "うたうます", "うたわます", "うたいません"],
+    "answer": "うたいます",
+    "explanation": "う → い + ます: うたう → うたいます."
+  },
+  {
+    "id": "verbs-n5-015",
+    "type": "mc",
+    "level": "N5",
+    "tags": ["u-verb", "negation"],
+    "question": "Wie lautet die Verneinung (Grundform) von まつ (warten)?",
+    "options": ["またない", "まちない", "まつない", "まってない"],
+    "answer": "またない",
+    "explanation": "つ → た + ない: まつ → またない."
+  },
+  {
+    "id": "verbs-n5-016",
+    "type": "mc",
+    "level": "N5",
+    "tags": ["u-verb", "masu"],
+    "question": "Wie lautet die ます-Form von まつ?",
+    "options": ["まちます", "まつます", "またます", "まちません"],
+    "answer": "まちます",
+    "explanation": "つ → ち + ます: まつ → まちます."
+  },
+  {
+    "id": "verbs-n5-017",
+    "type": "mc",
+    "level": "N5",
+    "tags": ["u-verb", "negation"],
+    "question": "Wie lautet die Verneinung (Grundform) von はなす (sprechen)?",
+    "options": ["はなさない", "はなしない", "はなすない", "はなんない"],
+    "answer": "はなさない",
+    "explanation": "す → さ + ない: はなす → はなさない."
+  },
+  {
+    "id": "verbs-n5-018",
+    "type": "mc",
+    "level": "N5",
+    "tags": ["u-verb", "masu"],
+    "question": "Wie lautet die ます-Form von よむ (lesen)?",
+    "options": ["よみます", "よむます", "よみません", "よめます"],
+    "answer": "よみます",
+    "explanation": "む → み + ます: よむ → よみます."
+  },
+  {
+    "id": "verbs-n5-019",
+    "type": "mc",
+    "level": "N5",
+    "tags": ["u-verb", "vergangenheit"],
+    "question": "Wie lautet die Vergangenheitsform (ます) von よむ?",
+    "options": ["よみました", "よむました", "よみません", "よまない"],
+    "answer": "よみました",
+    "explanation": "よみます → よみました = ich habe gelesen."
+  },
+  {
+    "id": "verbs-n5-020",
+    "type": "mc",
+    "level": "N5",
+    "tags": ["u-verb", "negation"],
+    "question": "Wie lautet die Verneinung (Grundform) von あそぶ (spielen)?",
+    "options": ["あそばない", "あそびない", "あそぶない", "あそんない"],
+    "answer": "あそばない",
+    "explanation": "ぶ → ば + ない: あそぶ → あそばない."
+  },
+  {
+    "id": "verbs-n5-021",
+    "type": "mc",
+    "level": "N5",
+    "tags": ["u-verb", "masu"],
+    "question": "Wie lautet die ます-Form von あそぶ?",
+    "options": ["あそびます", "あそぶます", "あそばます", "あそびました"],
+    "answer": "あそびます",
+    "explanation": "ぶ → び + ます: あそぶ → あそびます."
+  },
+  {
+    "id": "verbs-n5-022",
+    "type": "mc",
+    "level": "N5",
+    "tags": ["ru-verb", "masu"],
+    "question": "Wie lautet die ます-Form von あける (öffnen)?",
+    "options": ["あけます", "あけります", "あけるます", "あけません"],
+    "answer": "あけます",
+    "explanation": "あける ist ein る-Verb (Grundform endet auf える): あける → あけます."
+  },
+  {
+    "id": "verbs-n5-023",
+    "type": "mc",
+    "level": "N5",
+    "tags": ["ru-verb", "negation"],
+    "question": "Wie lautet die Verneinung (Grundform) von みる (sehen)?",
+    "options": ["みない", "みらない", "みるない", "みません"],
+    "answer": "みない",
+    "explanation": "る-Verb: グundform-る → ない: みる → みない."
+  },
+  {
+    "id": "verbs-n5-024",
+    "type": "mc",
+    "level": "N5",
+    "tags": ["ru-verb", "masu"],
+    "question": "Wie lautet die ます-Form von ねる (schlafen)?",
+    "options": ["ねます", "ねります", "ねるます", "ねみます"],
+    "answer": "ねます",
+    "explanation": "ねる ist ein る-Verb (Grundform endet auf える): ねる → ねます."
+  },
+  {
+    "id": "verbs-n5-025",
+    "type": "mc",
+    "level": "N5",
+    "tags": ["irregular", "masu"],
+    "question": "Wie lautet die ます-Form von する (machen/tun)?",
+    "options": ["します", "するます", "すります", "しない"],
+    "answer": "します",
+    "explanation": "する ist unregelmäßig: します, しません, しました."
+  },
+  {
+    "id": "verbs-n5-026",
+    "type": "mc",
+    "level": "N5",
+    "tags": ["nomen-verb"],
+    "question": "りょうり = das Kochen. Wie sagt man „ich koche“ mit Nomen + する?",
+    "options": [
+      "りょうり します",
+      "りょうり ます",
+      "りょうり です",
+      "りょうり の します"
+    ],
+    "answer": "りょうり します",
+    "explanation": "Nomen + する macht das Nomen zum Verb: べんきょう します (lernen), さんぽ します (spazieren), りょうり します (kochen)."
+  },
+  {
+    "id": "verbs-n5-027",
+    "type": "mc",
+    "level": "N5",
+    "tags": ["irregular", "vergangenheit"],
+    "question": "Wie lautet die Vergangenheitsform (ます) von する?",
+    "options": ["しました", "すりました", "するました", "しませんでした"],
+    "answer": "しました",
+    "explanation": "します → しました = ich habe gemacht/getan."
+  },
+  {
+    "id": "verbs-n5-028",
+    "type": "mc",
+    "level": "N5",
+    "tags": ["irregular", "masu"],
+    "question": "Wie lautet die ます-Form von くる (kommen)?",
+    "options": ["きます", "くるます", "きります", "きません"],
+    "answer": "きます",
+    "explanation": "くる ist unregelmäßig: きます, きません, きました."
+  },
+  {
+    "id": "verbs-n5-029",
+    "type": "mc",
+    "level": "N5",
+    "tags": ["irregular", "negation"],
+    "question": "Wie lautet die Verneinung (Grundform) von くる?",
+    "options": ["こない", "きない", "くらない", "きません"],
+    "answer": "こない",
+    "explanation": "Sonderfall: くる → こない (nicht きない!)."
+  },
+  {
+    "id": "verbs-n5-030",
+    "type": "mc",
+    "level": "N5",
+    "tags": ["irregular", "vergangenheit"],
+    "question": "Wie lautet die Vergangenheitsform (ます) von くる?",
+    "options": ["きました", "きりました", "くるました", "きませんでした"],
+    "answer": "きました",
+    "explanation": "きます → きました = er/sie ist gekommen."
+  }
+]
