@@ -1,14 +1,14 @@
 // ------------------------------------------------------------
-// QuestionCard – Rahmen um eine Frage:
-// Meta-Badges (Niveau, Modul), Fragetext, passender Renderer
-// (nach "type"), Feedback-Box mit Erklärung.
+// QuestionCard – frame around one question: meta badges (level,
+// module), question text, the renderer chosen by "type", and the
+// feedback box with explanation.
 // ------------------------------------------------------------
 
 function QuestionCard({ question, moduleIndex, selected, onSelect }) {
   const answered = selected !== null && selected !== undefined;
   const correct = answered && isCorrectAnswer(question, selected);
 
-  // Renderer nach Fragetyp wählen – hier wachsen spätere Typen rein
+  // Pick the renderer by question type – future types plug in here.
   let body = null;
   if (question.type === "mc") {
     body = (

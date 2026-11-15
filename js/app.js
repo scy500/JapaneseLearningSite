@@ -1,6 +1,7 @@
 // ------------------------------------------------------------
-// app.js – Root-Komponente: Laden der Fragen, Filter-Zustand,
-// Start-Screen, Übergänge zwischen den Phasen.
+// app.js – root component: loads all questions, holds the filter
+// state, the per-round limit, and switches between phases
+// (start | quiz | summary).
 // ------------------------------------------------------------
 
 function Header() {
@@ -19,6 +20,74 @@ function Header() {
   );
 }
 
+// ------------------------------------------------------------
+// LimitPicker – "questions per round": 10 / 20 / all / custom.
+// limit === null means "all questions". Invalid custom input
+// disables the start button and shows a hint.
+// ------------------------------------------------------------
+function LimitPicker({ limit, onLimit, custom, onCustom }) {
+  const presets = [10, 20];
+
+  function pick(n) {
+    onLimit(n);
+    onCustom("");
+  }
+
+  function onInput(e) {
+    const text = e.target.value;
+    onCustom(text);
+    const n = parseInt(text, 10);
+    if (text !== "" && n >= 1) onLimit(n);
+  }
+
+  const allActive = custom === "" && limit === null;
+
+  return (
+    <div className="filter-group limit-picker">
+      <p className="filter-label">Fragen pro Runde</p>
+      <div className="chip-row limit-row">
+        {presets.map((n) => (
+          <button
+            key={n}
+            type="button"
+            className={
+              "chip" + (custom === "" && limit === n ? " is-active" : "")
+            }
+            onClick={() => pick(n)}
+          >
+            {n}
+          </button>
+        ))}
+        <button
+          type="button"
+          className={"chip" + (allActive ? " is-active" : "")}
+          onClick={() => pick(null)}
+        >
+          Alle
+        </button>
+        <input
+          type="number"
+          min="1"
+          step="1"
+          value={custom}
+          onChange={onInput}
+          placeholder="Eigene Zahl"
+          aria-label="Eigene Anzahl Fragen pro Runde"
+          className="limit-input"
+        />
+      </div>
+      {custom !== "" && !(parseInt(custom, 10) >= 1) && (
+        <p className="limit-hint">
+          Bitte eine Zahl ab 1 eingeben – oder eine Voreinstellung wählen.
+        </p>
+      )}
+    </div>
+  );
+}
+
+// ------------------------------------------------------------
+// StartScreen – filters + limit + start button on the home page.
+// ------------------------------------------------------------
 function StartScreen({
   data,
   filter,
@@ -27,14 +96,21 @@ function StartScreen({
   modules,
   counts,
   filteredCount,
+  roundCount,
+  limit,
+  onLimit,
+  custom,
+  onCustom,
+  startDisabled,
   onStart,
 }) {
   return (
     <section className="card start-card">
       <h2>Session zusammenstellen</h2>
       <p className="start-help">
-        Wähle Niveau und Module. Danach werden die Fragen gemischt und
-        nacheinander gestellt – mit Sofort-Feedback und Erklärung.
+        Wähle Niveau und Module und lege fest, wie viele Fragen pro Runde
+        drankommen. Die Fragen werden gemischt und nacheinander gestellt – mit
+        Sofort-Feedback und Erklärung.
       </p>
       <FilterPanel
         filter={filter}
@@ -44,16 +120,26 @@ function StartScreen({
         moduleIndex={data.moduleIndex}
         counts={counts}
       />
+      <LimitPicker
+        limit={limit}
+        onLimit={onLimit}
+        custom={custom}
+        onCustom={onCustom}
+      />
       <div className="start-actions">
         <p className={"start-count" + (filteredCount === 0 ? " is-empty" : "")}>
-          {filteredCount > 0
-            ? pluralQuestions(filteredCount) + " bereit"
-            : "Keine Fragen für diese Auswahl"}
+          {filteredCount === 0
+            ? "Keine Fragen für diese Auswahl"
+            : "Runde: " +
+              pluralQuestions(roundCount) +
+              (roundCount < filteredCount
+                ? " (aus " + filteredCount + " verfügbaren)"
+                : "")}
         </p>
         <button
           type="button"
           className="btn btn-primary btn-big"
-          disabled={filteredCount === 0}
+          disabled={startDisabled}
           onClick={onStart}
         >
           Session starten
@@ -69,17 +155,18 @@ function App() {
   const [filter, setFilter] = React.useState({ levels: {}, modules: {} });
   const [phase, setPhase] = React.useState("start"); // start | quiz | summary
   const [session, setSession] = React.useState(null); // { questions, results }
+  const [limit, setLimit] = React.useState(10); // number or null = all
+  const [custom, setCustom] = React.useState(""); // text in the custom input
 
   React.useEffect(() => {
     loadAllQuestions()
       .then((loaded) => {
-        // Default: alles Verfügbare aktiv
+        // Default: everything enabled. Levels without questions (N2/N1)
+        // stay visible so future content only needs a JSON file.
         const levels = {};
+        LEVELS.forEach((l) => (levels[l] = true));
         const modules = {};
-        loaded.questions.forEach((q) => {
-          levels[q.level] = true;
-          modules[q.module] = true;
-        });
+        Object.keys(loaded.moduleIndex).forEach((m) => (modules[m] = true));
         setFilter({ levels, modules });
         setData(loaded);
       })
@@ -101,20 +188,21 @@ function App() {
     return { levels, modules };
   }, [data]);
 
-  const availableLevels = React.useMemo(() => {
-    if (!data) return [];
-    return LEVELS.filter((l) => data.questions.some((q) => q.level === l));
-  }, [data]);
+  // Show every level (even empty ones) and every module from the registry.
+  const levels = LEVELS;
+  const modules = React.useMemo(
+    () => (data ? Object.keys(data.moduleIndex) : []),
+    [data],
+  );
 
-  const availableModules = React.useMemo(() => {
-    if (!data) return [];
-    return Object.keys(data.moduleIndex).filter(
-      (id) => (counts.modules[id] || 0) > 0,
-    );
-  }, [data, counts]);
+  const customInvalid = custom !== "" && !(parseInt(custom, 10) >= 1);
+  const roundCount = limit ? Math.min(limit, filtered.length) : filtered.length;
+  const startDisabled = filtered.length === 0 || customInvalid;
 
   function startSession() {
-    setSession({ questions: prepareSession(filtered), results: null });
+    const pool = prepareSession(filtered); // shuffle first …
+    const questions = limit ? pool.slice(0, limit) : pool; // … then cap
+    setSession({ questions, results: null });
     setPhase("quiz");
   }
 
@@ -145,10 +233,16 @@ function App() {
             data={data}
             filter={filter}
             onFilterChange={setFilter}
-            levels={availableLevels}
-            modules={availableModules}
+            levels={levels}
+            modules={modules}
             counts={counts}
             filteredCount={filtered.length}
+            roundCount={roundCount}
+            limit={limit}
+            onLimit={setLimit}
+            custom={custom}
+            onCustom={setCustom}
+            startDisabled={startDisabled}
             onStart={startSession}
           />
         )}

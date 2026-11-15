@@ -1,6 +1,6 @@
 // ------------------------------------------------------------
-// Quiz – steuert eine Session: aktuelle Frage, Auswahl,
-// Sofort-Feedback, Score-Zähler, Fortschritt, Weiter-Button.
+// Quiz – runs one session: current question, selection state,
+// instant feedback, live score, progress bar, next button.
 // ------------------------------------------------------------
 
 function Quiz({ questions, moduleIndex, onFinish, onQuit }) {

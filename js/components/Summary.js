@@ -1,6 +1,6 @@
 // ------------------------------------------------------------
-// Summary – Ergebnis am Ende einer Session.
-// Score gilt nur für die Session, nichts wird gespeichert.
+// Summary – end-of-session result. The score is per-session only;
+// nothing is stored anywhere.
 // ------------------------------------------------------------
 
 function Summary({ results, onRestart, onHome }) {

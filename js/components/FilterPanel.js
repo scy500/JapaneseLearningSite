@@ -1,6 +1,6 @@
 // ------------------------------------------------------------
-// FilterPanel – Niveau- und Modul-Filter (umschaltbare Chips).
-// Zeigt nur Level/Module, die tatsächlich Fragen haben.
+// FilterPanel – level and module filters (toggleable chips).
+// Categories with zero questions render half-transparent.
 // ------------------------------------------------------------
 
 function FilterPanel({
@@ -18,6 +18,14 @@ function FilterPanel({
     });
   }
 
+  function chipClass(kind, id, count) {
+    return (
+      "chip" +
+      (filter[kind][id] ? " is-active" : "") +
+      (count === 0 ? " is-empty" : "")
+    );
+  }
+
   return (
     <div className="filter">
       <div className="filter-group">
@@ -27,7 +35,7 @@ function FilterPanel({
             <button
               key={level}
               type="button"
-              className={"chip" + (filter.levels[level] ? " is-active" : "")}
+              className={chipClass("levels", level, counts.levels[level] || 0)}
               onClick={() => toggle("levels", level)}
             >
               {level}
@@ -44,7 +52,7 @@ function FilterPanel({
             <button
               key={id}
               type="button"
-              className={"chip" + (filter.modules[id] ? " is-active" : "")}
+              className={chipClass("modules", id, counts.modules[id] || 0)}
               onClick={() => toggle("modules", id)}
             >
               {moduleLabel(moduleIndex, id)}

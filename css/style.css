@@ -550,4 +550,40 @@ button:focus-visible,
   .summary-actions .btn {
     width: 100%;
   }
+
+  /* ---------- Question per round ---------- */
+  .limit-picker {
+    margin-top: 18px;
+  }
+
+  .limit-row {
+    align-items: center;
+  }
+
+  .limit-input {
+    width: 130px;
+    padding: 8px 14px;
+    border-radius: 999px;
+    border: 1.5px solid var(--border);
+    background: var(--surface);
+    color: var(--ink);
+    font: inherit;
+    font-weight: 600;
+  }
+
+  .limit-input:focus-visible {
+    outline: 2px solid var(--accent);
+    outline-offset: 2px;
+  }
+
+  .limit-hint {
+    margin: 8px 0 0;
+    color: var(--bad);
+    font-size: 0.85rem;
+    font-weight: 600;
+  }
+
+  .chip.is-empty {
+    opacity: 0.55;
+  }
 }

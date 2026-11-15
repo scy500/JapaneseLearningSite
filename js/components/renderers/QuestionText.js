@@ -1,7 +1,7 @@
 // ------------------------------------------------------------
-// QuestionText – rendert den Fragetext.
-// "___" wird als sichtbare Lücke dargestellt; nach dem Antworten
-// wird die gewählte Lösung in die Lücke eingesetzt (grün/rot).
+// QuestionText – renders the question prompt. "___" becomes a
+// visible blank; once answered, the chosen option is filled in
+// (green/red) instead.
 // ------------------------------------------------------------
 
 function QuestionText({ question, selected }) {

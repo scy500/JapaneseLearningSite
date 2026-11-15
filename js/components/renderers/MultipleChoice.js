@@ -1,7 +1,7 @@
 // ------------------------------------------------------------
-// MultipleChoice – Renderer für Fragen vom Typ "mc".
-// Sofort-Feedback: korrekt = grün, gewählt+falsch = rot,
-// der Rest wird gedimmt. Danach sind alle Buttons gesperrt.
+// MultipleChoice – renderer for question type "mc".
+// Instant feedback: correct option = green, chosen-but-wrong =
+// red, everything else dimmed. All buttons lock after answering.
 // ------------------------------------------------------------
 
 function MultipleChoice({ question, selected, onSelect }) {

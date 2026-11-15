@@ -17,9 +17,10 @@
   <body>
     <div id="root"></div>
 
-    <!-- React + Babel über CDN: kein Build-Step, läuft komplett im Browser.
-       Wichtig: relative Pfade (kein führendes "/"), damit es als
-       GitHub-Projekt-Page unter .../JapaneseLearningSite/ funktioniert. -->
+    <!-- React + Babel via CDN: no build step, everything runs in the
+         browser. Important: relative paths (no leading "/") so the
+         site works as a GitHub project page under
+         .../JapaneseLearningSite/ -->
     <script
       crossorigin
       src="https://unpkg.com/react@18.3.1/umd/react.production.min.js"
@@ -30,7 +31,7 @@
     ></script>
     <script src="https://unpkg.com/@babel/standalone@7.24.7/babel.min.js"></script>
 
-    <!-- App-Dateien (Reihenfolge wichtig: utils -> Renderer -> Komponenten -> App) -->
+    <!-- App scripts (order matters: utils -> renderers -> components -> app) -->
     <script type="text/babel" data-presets="react" src="js/utils.js"></script>
     <script
       type="text/babel"

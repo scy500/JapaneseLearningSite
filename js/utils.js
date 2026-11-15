@@ -1,25 +1,25 @@
 // ------------------------------------------------------------
-// utils.js – Konstanten & Hilfsfunktionen
-// (globale Funktionen, kein Modul-System – Babel lädt die
-//  Dateien über index.html in der richtigen Reihenfolge)
+// utils.js – constants & helper functions.
+// All functions are global (no module system): index.html loads
+// the scripts in the correct order via Babel standalone.
 // ------------------------------------------------------------
 
-const LEVELS = ["N5", "N4", "N3"];
+const LEVELS = ["N5", "N4", "N3", "N2", "N1"];
 const DATA_DIR = "js/data";
 
-// Alle akzeptierten Antworten einer Frage
-// ("answer" darf ein String oder ein Array von Alternativen sein)
+// All accepted answers of a question.
+// ("answer" may be a single string or an array of alternatives.)
 function getAnswers(question) {
   return Array.isArray(question.answer) ? question.answer : [question.answer];
 }
 
-// Antwort prüfen (Whitespace-tolerant)
+// Check a given answer (whitespace-tolerant).
 function isCorrectAnswer(question, given) {
   const g = String(given).trim();
   return getAnswers(question).some((a) => String(a).trim() === g);
 }
 
-// Fisher-Yates – mischt eine Kopie des Arrays
+// Fisher–Yates shuffle – returns a shuffled copy of the array.
 function shuffle(list) {
   const arr = list.slice();
   for (let i = arr.length - 1; i > 0; i--) {
@@ -29,7 +29,8 @@ function shuffle(list) {
   return arr;
 }
 
-// Frage validieren: unvollständige Fragen werden übersprungen (Konsolen-Warnung)
+// Validate a raw question object: incomplete questions are skipped
+// with a console warning instead of breaking the session.
 function sanitizeQuestion(raw, moduleId, index) {
   const where = moduleId + " #" + (index + 1);
   if (
@@ -40,14 +41,14 @@ function sanitizeQuestion(raw, moduleId, index) {
     !raw.question ||
     raw.answer === undefined
   ) {
-    console.warn("Frage übersprungen (" + where + "): unvollständig.", raw);
+    console.warn("Question skipped (" + where + "): incomplete.", raw);
     return null;
   }
   if (
     (raw.type === "mc" || raw.type === "cloze") &&
     !Array.isArray(raw.options)
   ) {
-    console.warn("Frage übersprungen (" + where + "): options fehlt.", raw);
+    console.warn("Question skipped (" + where + "): missing options.", raw);
     return null;
   }
   const q = { ...raw, module: moduleId };
@@ -55,16 +56,14 @@ function sanitizeQuestion(raw, moduleId, index) {
   return q;
 }
 
-// Modul-Verzeichnis (js/data/index.json) + alle Fragen laden.
-// Fehlende Modul-Dateien werden ignoriert – so kann jedes Modul
-// einfach "später dazugelegt" werden, ohne die Logik zu ändern.
+// Load the module registry (js/data/index.json) plus every module file.
+// Missing module files are ignored on purpose: modules can be added
+// later without touching any loader logic.
 async function loadAllQuestions() {
   const indexRes = await fetch(DATA_DIR + "/index.json");
   if (!indexRes.ok) {
     throw new Error(
-      "js/data/index.json konnte nicht geladen werden (HTTP " +
-        indexRes.status +
-        ")",
+      "js/data/index.json could not be loaded (HTTP " + indexRes.status + ")",
     );
   }
   const moduleIndex = await indexRes.json();
@@ -89,9 +88,7 @@ async function loadAllQuestions() {
       });
     } else {
       console.warn(
-        "Modul '" +
-          id +
-          "': Datei fehlt noch oder ist fehlerhaft – wird übersprungen.",
+        "Module '" + id + "': file missing or broken – skipped.",
         result.reason && result.reason.message,
       );
     }
@@ -100,26 +97,27 @@ async function loadAllQuestions() {
   return { moduleIndex, questions };
 }
 
-// Fragen gemäß Filter (Niveau + Modul) auswählen
+// Apply the level + module filter.
 function filterQuestions(questions, filter) {
   return questions.filter(
     (q) => filter.levels[q.level] && filter.modules[q.module],
   );
 }
 
-// Session vorbereiten: Fragen-Reihenfolge mischen + Antwortoptionen mischen
+// Prepare a session: shuffle the question order and, per question,
+// shuffle the answer options (copies, originals stay untouched).
 function prepareSession(questions) {
   return shuffle(questions).map((q) =>
     Array.isArray(q.options) ? { ...q, options: shuffle(q.options) } : q,
   );
 }
 
-// Anzeigename eines Moduls
+// Display name of a module (falls back to its id).
 function moduleLabel(moduleIndex, id) {
   return (moduleIndex && moduleIndex[id]) || id;
 }
 
-// "1 Frage" / "12 Fragen"
+// German plural for the start screen ("1 Frage" / "12 Fragen").
 function pluralQuestions(n) {
   return n === 1 ? "1 Frage" : n + " Fragen";
 }
