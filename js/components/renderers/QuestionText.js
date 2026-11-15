@@ -7,7 +7,7 @@
 function QuestionText({ question, selected }) {
   const parts = String(question.question).split("___");
   const answered = selected !== null && selected !== undefined;
-  const filledOk = answered && isCorrectAnswer(question, selected);
+  const filledOk = answered && checkAnswer(question, selected);
 
   return (
     <p className="question-text">

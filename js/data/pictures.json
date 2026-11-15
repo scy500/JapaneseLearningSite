@@ -1,0 +1,25 @@
+[
+  {
+    "id": "pictures-n5-demo",
+    "type": "multi",
+    "level": "N5",
+    "tags": ["bild", "demo"],
+    "question": "Was ist auf dem Bild zu sehen? Wähle alle zutreffenden Beschreibungen.",
+    "image": "img/pictures/placeholder.svg",
+    "alt": "Beispielszene: Haus, Auto und Baum unter blauem Himmel",
+    "options": [
+      "Ein Haus ist zu sehen.",
+      "Der Himmel ist blau.",
+      "Ein Baum steht im Garten.",
+      "Es ist Nacht.",
+      "Es schneit.",
+      "Im Bild ist ein Boot zu sehen."
+    ],
+    "answer": [
+      "Ein Haus ist zu sehen.",
+      "Der Himmel ist blau.",
+      "Ein Baum steht im Garten."
+    ],
+    "explanation": "Demo-Frage mit Platzhalterbild (Haus, Auto, Baum, Sonne, blauer Himmel). Später ersetzen durch eigene KI-Bilder + eigene Beschreibungen."
+  }
+]

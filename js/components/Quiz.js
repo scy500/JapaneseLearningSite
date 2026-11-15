@@ -15,7 +15,7 @@ function Quiz({ questions, moduleIndex, onFinish, onQuit }) {
 
   function handleSelect(option) {
     if (answered) return;
-    const correct = isCorrectAnswer(question, option);
+    const correct = checkAnswer(question, option);
     setSelected(option);
     setResults((prev) => [...prev, { id: question.id, correct }]);
   }
@@ -52,6 +52,7 @@ function Quiz({ questions, moduleIndex, onFinish, onQuit }) {
       </header>
 
       <QuestionCard
+        key={question.id}
         question={question}
         moduleIndex={moduleIndex}
         selected={selected}

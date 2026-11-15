@@ -1,18 +1,30 @@
 // ------------------------------------------------------------
 // QuestionCard – frame around one question: meta badges (level,
-// module), question text, the renderer chosen by "type", and the
-// feedback box with explanation.
+// module), optional image, question text, the renderer chosen
+// by "type", and the feedback box with explanation.
 // ------------------------------------------------------------
 
 function QuestionCard({ question, moduleIndex, selected, onSelect }) {
   const answered = selected !== null && selected !== undefined;
-  const correct = answered && isCorrectAnswer(question, selected);
+  const correct = answered && checkAnswer(question, selected);
 
   // Pick the renderer by question type – future types plug in here.
   let body = null;
   if (question.type === "mc") {
     body = (
       <MultipleChoice
+        question={question}
+        selected={selected}
+        onSelect={onSelect}
+      />
+    );
+  } else if (question.type === "order") {
+    body = (
+      <OrderInput question={question} selected={selected} onSelect={onSelect} />
+    );
+  } else if (question.type === "multi") {
+    body = (
+      <MultiSelect
         question={question}
         selected={selected}
         onSelect={onSelect}
@@ -34,6 +46,12 @@ function QuestionCard({ question, moduleIndex, selected, onSelect }) {
           {moduleLabel(moduleIndex, question.module)}
         </span>
       </div>
+
+      {question.image && (
+        <figure className="question-image">
+          <img src={question.image} alt={question.alt || "Bild zur Frage"} />
+        </figure>
+      )}
 
       <QuestionText question={question} selected={selected} />
       {body}

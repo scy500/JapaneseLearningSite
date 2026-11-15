@@ -1,0 +1,113 @@
+[
+  {
+    "id": "translate-n5-001",
+    "type": "order",
+    "level": "N5",
+    "tags": ["translation", "ja-de"],
+    "question": "Baue den deutschen Satz:\nくるま は あおい です。",
+    "translation": "Das Auto ist blau.",
+    "tilesHint": null,
+    "answer": "Das Auto ist blau.",
+    "distractors": ["Der", "Himmel"],
+    "explanation": "くるま = Auto, あおい = blau. Muster: Thema + は + Eigenschaft + です."
+  },
+  {
+    "id": "translate-n5-002",
+    "type": "order",
+    "level": "N5",
+    "tags": ["translation", "de-ja"],
+    "question": "Baue den japanischen Satz:\nDer Hund ist im Garten.",
+    "translation": "いぬ は にわ に います。",
+    "answer": "いぬ は にわ に います。",
+    "distractors": ["あります", "で"],
+    "explanation": "いぬ ist ein Lebewesen → います (nicht あります). Existenzort mit に."
+  },
+  {
+    "id": "translate-n5-003",
+    "type": "order",
+    "level": "N5",
+    "tags": ["translation", "ja-de"],
+    "question": "Baue den deutschen Satz:\nこれは ペン です。",
+    "translation": "Das ist ein Stift.",
+    "answer": "Das ist ein Stift.",
+    "distractors": ["Der", "Buch"],
+    "explanation": "これ = das hier (nahe beim Sprecher), ペン = Stift."
+  },
+  {
+    "id": "translate-n5-004",
+    "type": "order",
+    "level": "N5",
+    "tags": ["translation", "de-ja"],
+    "question": "Baue den japanischen Satz:\nDas ist kein Hund.",
+    "translation": "これは いぬ じゃない です。",
+    "answer": "これは いぬ じゃない です。",
+    "distractors": ["ありません", "では"],
+    "explanation": "Nomen-Verneinung: じゃない です (formeller: じゃありません)."
+  },
+  {
+    "id": "translate-n5-005",
+    "type": "order",
+    "level": "N5",
+    "tags": ["translation", "ja-de"],
+    "question": "Baue den deutschen Satz:\nそら は あおい です。",
+    "translation": "Der Himmel ist blau.",
+    "answer": "Der Himmel ist blau.",
+    "distractors": ["Die", "Auto"],
+    "explanation": "そら = Himmel (das Thema), あおい = blau."
+  },
+  {
+    "id": "translate-n5-006",
+    "type": "order",
+    "level": "N5",
+    "tags": ["translation", "de-ja"],
+    "question": "Baue den japanischen Satz:\nIch gehe zur Schule.",
+    "translation": "わたし は がっこう に いきます。",
+    "answer": "わたし は がっこう に いきます。",
+    "distractors": ["で", "きます"],
+    "explanation": "Bewegungsziel = に (へ ginge auch). いく → いきます ist die ます-Form."
+  },
+  {
+    "id": "translate-n5-007",
+    "type": "order",
+    "level": "N5",
+    "tags": ["translation", "ja-de"],
+    "question": "Baue den deutschen Satz:\nわたし の なまえ は たなか です。",
+    "translation": "Mein Name ist Tanaka.",
+    "answer": "Mein Name ist Tanaka.",
+    "distractors": ["Dein", "Freund"],
+    "explanation": "わたし の なまえ = mein Name; は macht なまえ zum Thema des Satzes."
+  },
+  {
+    "id": "translate-n5-008",
+    "type": "order",
+    "level": "N5",
+    "tags": ["translation", "de-ja"],
+    "question": "Baue den japanischen Satz:\nIch mag Katzen.",
+    "translation": "わたし は ねこ が すき です。",
+    "answer": "わたし は ねこ が すき です。",
+    "distractors": ["を"],
+    "explanation": "Bei すき (mögen) steht das Gemochte mit が, nicht mit を."
+  },
+  {
+    "id": "translate-n5-009",
+    "type": "order",
+    "level": "N5",
+    "tags": ["translation", "ja-de"],
+    "question": "Baue den deutschen Satz:\nいま は ろくじ です。",
+    "translation": "Es ist jetzt 6 Uhr.",
+    "answer": "Es ist jetzt 6 Uhr.",
+    "distractors": ["Jahre", "alt"],
+    "explanation": "ろく じ = 6 Uhr. Uhrzeiten folgen demselben Muster X は Y です."
+  },
+  {
+    "id": "translate-n5-010",
+    "type": "order",
+    "level": "N5",
+    "tags": ["translation", "de-ja"],
+    "question": "Baue den japanischen Satz:\nDas Auto ist vor dem Haus.",
+    "translation": "くるま は いえ の まえ に あります。",
+    "answer": "くるま は いえ の まえ に あります。",
+    "distractors": ["で", "います"],
+    "explanation": "いえ の まえ = vor dem Haus (の zwischen den Nomen). あります, weil ein Auto kein Lebewesen ist."
+  }
+]
