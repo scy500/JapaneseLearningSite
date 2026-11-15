@@ -161,10 +161,12 @@ function App() {
   React.useEffect(() => {
     loadAllQuestions()
       .then((loaded) => {
-        // Default: everything enabled. Levels without questions (N2/N1)
-        // stay visible so future content only needs a JSON file.
+        // Default: only N5 (the entry level) active, every module on.
+        // Other levels stay visible but off – switching one on is a
+        // single click. "Nothing selected" would disable the start
+        // button and create a dead start screen.
         const levels = {};
-        LEVELS.forEach((l) => (levels[l] = true));
+        LEVELS.forEach((l) => (levels[l] = l === "N5"));
         const modules = {};
         Object.keys(loaded.moduleIndex).forEach((m) => (modules[m] = true));
         setFilter({ levels, modules });
@@ -214,6 +216,7 @@ function App() {
     setSession((prev) => ({ ...prev, results }));
     setPhase("summary");
   }
+
   // Start a "repeat mistakes" round: only the questions that were
   // answered wrong, shuffled again.
   function repeatMistakes(mistakeQuestions) {
