@@ -17,7 +17,10 @@ function Quiz({ questions, moduleIndex, onFinish, onQuit }) {
     if (answered) return;
     const correct = checkAnswer(question, option);
     setSelected(option);
-    setResults((prev) => [...prev, { id: question.id, correct }]);
+    setResults((prev) => [
+      ...prev,
+      { id: question.id, correct, question, selected: option },
+    ]);
   }
 
   function next() {

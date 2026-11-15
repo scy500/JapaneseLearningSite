@@ -214,6 +214,12 @@ function App() {
     setSession((prev) => ({ ...prev, results }));
     setPhase("summary");
   }
+  // Start a "repeat mistakes" round: only the questions that were
+  // answered wrong, shuffled again.
+  function repeatMistakes(mistakeQuestions) {
+    setSession({ questions: prepareSession(mistakeQuestions), results: null });
+    setPhase("quiz");
+  }
 
   return (
     <div className="app">
@@ -259,6 +265,8 @@ function App() {
         {data && phase === "summary" && session && session.results && (
           <Summary
             results={session.results}
+            moduleIndex={data.moduleIndex}
+            onRepeatMistakes={repeatMistakes}
             onRestart={startSession}
             onHome={backToStart}
           />

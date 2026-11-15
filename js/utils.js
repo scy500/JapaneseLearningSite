@@ -18,6 +18,7 @@ function isCorrectAnswer(question, given) {
   const g = String(given).trim();
   return getAnswers(question).some((a) => String(a).trim() === g);
 }
+
 // "multi" questions: correct only if the chosen set exactly matches
 // the accepted answers (no more, no less).
 function isCorrectMulti(question, givenList) {
@@ -28,12 +29,59 @@ function isCorrectMulti(question, givenList) {
     answers.every((a) => given.includes(String(a).trim()))
   );
 }
+
+// Normalize Japanese text for tolerant comparison in dictation
+// questions: lowercase, drop spaces (half & full width) and common
+// punctuation so "は です。" and "はです" count as equal.
+function normalizeJa(text) {
+  return String(text)
+    .toLowerCase()
+    .replace(/[\s\u3000]/g, "")
+    .replace(/[。．.？！?、，,「」『』　"']/g, "");
+}
+
+// "dictation" questions: correct if the typed text matches any
+// accepted answer after normalization.
+function isCorrectDictation(question, given) {
+  const g = normalizeJa(given);
+  if (!g) return false;
+  return getAnswers(question).some((a) => normalizeJa(a) === g);
+}
+
 // Unified answer check: dispatches by question type.
-// (mc / cloze / order compare strings, multi compares sets.)
+// (mc / cloze / order compare strings, multi compares sets,
+// dictation compares normalized text.)
 function checkAnswer(question, given) {
   if (question.type === "multi") return isCorrectMulti(question, given);
+  if (question.type === "dictation") return isCorrectDictation(question, given);
   return isCorrectAnswer(question, given);
 }
+
+// ---- Web Speech API (TTS) ------------------------------------
+// Speak a Japanese text via speechSynthesis. No audio files:
+// the browser generates the voice on the fly.
+function speakJapanese(text, rate) {
+  if (typeof window === "undefined" || !window.speechSynthesis) return null;
+  window.speechSynthesis.cancel();
+  const utterance = new SpeechSynthesisUtterance(text);
+  utterance.lang = "ja-JP";
+  utterance.rate = rate === undefined ? 0.85 : rate;
+  const voices = window.speechSynthesis.getVoices();
+  const jaVoice = voices.find(
+    (v) => v.lang && v.lang.toLowerCase().startsWith("ja"),
+  );
+  if (jaVoice) utterance.voice = jaVoice;
+  window.speechSynthesis.speak(utterance);
+  return utterance;
+}
+
+// Stop any current speech (used on "next"/"quit").
+function stopSpeaking() {
+  if (typeof window !== "undefined" && window.speechSynthesis) {
+    window.speechSynthesis.cancel();
+  }
+}
+
 // Fisher–Yates shuffle – returns a shuffled copy of the array.
 function shuffle(list) {
   const arr = list.slice();
@@ -59,82 +107,87 @@ function sanitizeQuestion(raw, moduleId, index) {
     console.warn("Question skipped (" + where + "): incomplete.", raw);
     return null;
   }
-  if (
-    (raw.type === "mc" || raw.type === "cloze" || raw.type === "multi") &&
-    !Array.isArray(raw.options)
-  ) {
-    {
-      console.warn("Question skipped (" + where + "): missing options.", raw);
-      return null;
-    }
-    const q = { ...raw, module: moduleId };
-    if (!q.id) q.id = moduleId + "-" + String(index + 1).padStart(3, "0");
-    return q;
+  const needsOptions =
+    raw.type === "mc" ||
+    raw.type === "cloze" ||
+    raw.type === "multi" ||
+    raw.type === "listening";
+  const needsAudio = raw.type === "dictation" || raw.type === "listening";
+  if (needsOptions && !Array.isArray(raw.options)) {
+    console.warn("Question skipped (" + where + "): missing options.", raw);
+    return null;
   }
+  if (needsAudio && !raw.audio) {
+    console.warn("Question skipped (" + where + "): missing audio.", raw);
+    return null;
+  }
+  const q = { ...raw, module: moduleId };
+  if (!q.id) q.id = moduleId + "-" + String(index + 1).padStart(3, "0");
+  return q;
+}
 
-  // Load the module registry (js/data/index.json) plus every module file.
-  // Missing module files are ignored on purpose: modules can be added
-  // later without touching any loader logic.
-  async function loadAllQuestions() {
-    const indexRes = await fetch(DATA_DIR + "/index.json");
-    if (!indexRes.ok) {
-      throw new Error(
-        "js/data/index.json could not be loaded (HTTP " + indexRes.status + ")",
+// Load the module registry (js/data/index.json) plus every module file.
+// Missing module files are ignored on purpose: modules can be added
+// later without touching any loader logic.
+async function loadAllQuestions() {
+  const indexRes = await fetch(DATA_DIR + "/index.json");
+  if (!indexRes.ok) {
+    throw new Error(
+      "js/data/index.json could not be loaded (HTTP " + indexRes.status + ")",
+    );
+  }
+  const moduleIndex = await indexRes.json();
+
+  const ids = Object.keys(moduleIndex);
+  const results = await Promise.allSettled(
+    ids.map((id) =>
+      fetch(DATA_DIR + "/" + id + ".json").then((res) => {
+        if (!res.ok) throw new Error("HTTP " + res.status);
+        return res.json();
+      }),
+    ),
+  );
+
+  const questions = [];
+  results.forEach((result, i) => {
+    const id = ids[i];
+    if (result.status === "fulfilled") {
+      result.value.forEach((raw, n) => {
+        const q = sanitizeQuestion(raw, id, n);
+        if (q) questions.push(q);
+      });
+    } else {
+      console.warn(
+        "Module '" + id + "': file missing or broken – skipped.",
+        result.reason && result.reason.message,
       );
     }
-    const moduleIndex = await indexRes.json();
+  });
 
-    const ids = Object.keys(moduleIndex);
-    const results = await Promise.allSettled(
-      ids.map((id) =>
-        fetch(DATA_DIR + "/" + id + ".json").then((res) => {
-          if (!res.ok) throw new Error("HTTP " + res.status);
-          return res.json();
-        }),
-      ),
-    );
+  return { moduleIndex, questions };
+}
 
-    const questions = [];
-    results.forEach((result, i) => {
-      const id = ids[i];
-      if (result.status === "fulfilled") {
-        result.value.forEach((raw, n) => {
-          const q = sanitizeQuestion(raw, id, n);
-          if (q) questions.push(q);
-        });
-      } else {
-        console.warn(
-          "Module '" + id + "': file missing or broken – skipped.",
-          result.reason && result.reason.message,
-        );
-      }
-    });
+// Apply the level + module filter.
+function filterQuestions(questions, filter) {
+  return questions.filter(
+    (q) => filter.levels[q.level] && filter.modules[q.module],
+  );
+}
 
-    return { moduleIndex, questions };
-  }
+// Prepare a session: shuffle the question order and, per question,
+// shuffle the answer options (copies, originals stay untouched).
+function prepareSession(questions) {
+  return shuffle(questions).map((q) =>
+    Array.isArray(q.options) ? { ...q, options: shuffle(q.options) } : q,
+  );
+}
 
-  // Apply the level + module filter.
-  function filterQuestions(questions, filter) {
-    return questions.filter(
-      (q) => filter.levels[q.level] && filter.modules[q.module],
-    );
-  }
+// Display name of a module (falls back to its id).
+function moduleLabel(moduleIndex, id) {
+  return (moduleIndex && moduleIndex[id]) || id;
+}
 
-  // Prepare a session: shuffle the question order and, per question,
-  // shuffle the answer options (copies, originals stay untouched).
-  function prepareSession(questions) {
-    return shuffle(questions).map((q) =>
-      Array.isArray(q.options) ? { ...q, options: shuffle(q.options) } : q,
-    );
-  }
-
-  // Display name of a module (falls back to its id).
-  function moduleLabel(moduleIndex, id) {
-    return (moduleIndex && moduleIndex[id]) || id;
-  }
-
-  // German plural for the start screen ("1 Frage" / "12 Fragen").
-  function pluralQuestions(n) {
-    return n === 1 ? "1 Frage" : n + " Fragen";
-  }
+// German plural for the start screen ("1 Frage" / "12 Fragen").
+function pluralQuestions(n) {
+  return n === 1 ? "1 Frage" : n + " Fragen";
 }
