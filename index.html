@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="de">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Japanisch lernen – Interaktive Japanisch-Übungen</title>
+    <meta
+      name="description"
+      content="Kostenlose interaktive Japanisch-Übungen: Partikel, Verbformen, Vokabeln. Ohne Account, komplett im Browser."
+    />
+    <link
+      rel="icon"
+      href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ccircle cx='50' cy='50' r='38' fill='%23c73e4d'/%3E%3C/svg%3E"
+    />
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <div id="root"></div>
+
+    <!-- React + Babel über CDN: kein Build-Step, läuft komplett im Browser.
+       Wichtig: relative Pfade (kein führendes "/"), damit es als
+       GitHub-Projekt-Page unter .../JapaneseLearningSite/ funktioniert. -->
+    <script
+      crossorigin
+      src="https://unpkg.com/react@18.3.1/umd/react.production.min.js"
+    ></script>
+    <script
+      crossorigin
+      src="https://unpkg.com/react-dom@18.3.1/umd/react-dom.production.min.js"
+    ></script>
+    <script src="https://unpkg.com/@babel/standalone@7.24.7/babel.min.js"></script>
+
+    <!-- App-Dateien (Reihenfolge wichtig: utils -> Renderer -> Komponenten -> App) -->
+    <script type="text/babel" data-presets="react" src="js/utils.js"></script>
+    <script
+      type="text/babel"
+      data-presets="react"
+      src="js/components/renderers/QuestionText.js"
+    ></script>
+    <script
+      type="text/babel"
+      data-presets="react"
+      src="js/components/renderers/MultipleChoice.js"
+    ></script>
+    <script
+      type="text/babel"
+      data-presets="react"
+      src="js/components/QuestionCard.js"
+    ></script>
+    <script
+      type="text/babel"
+      data-presets="react"
+      src="js/components/FilterPanel.js"
+    ></script>
+    <script
+      type="text/babel"
+      data-presets="react"
+      src="js/components/Quiz.js"
+    ></script>
+    <script
+      type="text/babel"
+      data-presets="react"
+      src="js/components/Summary.js"
+    ></script>
+    <script type="text/babel" data-presets="react" src="js/app.js"></script>
+  </body>
+</html>

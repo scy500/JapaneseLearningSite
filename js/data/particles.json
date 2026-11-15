@@ -1,0 +1,164 @@
+[
+  {
+    "id": "particles-n5-001",
+    "type": "mc",
+    "level": "N5",
+    "tags": ["thema"],
+    "question": "わたし ___ がくせい です。",
+    "translation": "Ich bin Studentin / Student.",
+    "options": ["は", "を", "に", "で"],
+    "answer": "は",
+    "explanation": "は markiert das THEMA des Satzes: わたし (ich) ist das, worüber der Satz spricht."
+  },
+  {
+    "id": "particles-n5-002",
+    "type": "mc",
+    "level": "N5",
+    "tags": ["objekt"],
+    "question": "みず ___ のみます。",
+    "translation": "Ich trinke Wasser.",
+    "options": ["は", "が", "を", "へ"],
+    "answer": "を",
+    "explanation": "を markiert das direkte Objekt – das Wasser wird getrunken. (は wäre nur als Kontrast möglich: „Wasser trinke ich, aber …“)"
+  },
+  {
+    "id": "particles-n5-003",
+    "type": "mc",
+    "level": "N5",
+    "tags": ["zeit"],
+    "question": "しちじ ___ おきます。",
+    "translation": "Ich stehe um 7 Uhr auf.",
+    "options": ["で", "に", "を", "と"],
+    "answer": "に",
+    "explanation": "に markiert konkrete Zeitpunkte (Uhrzeiten, Tage, Monate). Bei Wörtern wie きょう (heute) oder まいあさ (jeden Morgen) steht kein に."
+  },
+  {
+    "id": "particles-n5-004",
+    "type": "mc",
+    "level": "N5",
+    "tags": ["ort"],
+    "question": "としょかん ___ べんきょうします。",
+    "translation": "Ich lerne in der Bibliothek.",
+    "options": ["に", "で", "へ", "を"],
+    "answer": "で",
+    "explanation": "で markiert den Ort, an dem eine Handlung stattfindet. に stünde beim Bewegungsziel: としょかん に いきます (ich gehe in die Bibliothek)."
+  },
+  {
+    "id": "particles-n5-005",
+    "type": "mc",
+    "level": "N5",
+    "tags": ["verwendung"],
+    "question": "Wofür wird das Partikel で verwendet?",
+    "options": [
+      "Ort, an dem eine Handlung stattfindet",
+      "Ziel oder Richtung einer Bewegung",
+      "direktes Objekt eines Verbs",
+      "Zeitpunkt einer Handlung"
+    ],
+    "answer": "Ort, an dem eine Handlung stattfindet",
+    "explanation": "で steht am Handlungsort: うち で たべます (ich esse zu Hause). Richtung/Ziel = へ・に, Objekt = を, Zeitpunkte = に."
+  },
+  {
+    "id": "particles-n5-006",
+    "type": "mc",
+    "level": "N5",
+    "tags": ["begleitung"],
+    "question": "ともだち ___ えいが を みます。",
+    "translation": "Ich schaue mit einer Freundin einen Film.",
+    "options": ["に", "で", "と", "の"],
+    "answer": "と",
+    "explanation": "と heißt hier „zusammen mit“ + Person: ともだち と = mit einem Freund / einer Freundin."
+  },
+  {
+    "id": "particles-n5-007",
+    "type": "mc",
+    "level": "N5",
+    "tags": ["startpunkt"],
+    "question": "うち ___ えき まで あるきます。",
+    "translation": "Ich laufe von zu Hause bis zum Bahnhof.",
+    "options": ["から", "より", "を", "に"],
+    "answer": "から",
+    "explanation": "から markiert den Startpunkt („von …“), まで das Ende („bis …“). Da えき まで schon im Satz steht, fehlt der Startpunkt: うち から."
+  },
+  {
+    "id": "particles-n5-008",
+    "type": "mc",
+    "level": "N5",
+    "tags": ["richtung"],
+    "question": "とうきょう ___ いきます。",
+    "translation": "Ich gehe nach Tokio.",
+    "options": ["へ", "で", "を", "と"],
+    "answer": "へ",
+    "explanation": "へ markiert die Richtung / das Ziel einer Bewegung. (に wäre hier ebenfalls richtig – beide Partikel markieren das Ziel von いきます.)"
+  },
+  {
+    "id": "particles-n5-009",
+    "type": "mc",
+    "level": "N5",
+    "tags": ["zugehoerigkeit"],
+    "question": "わたし ___ なまえ は たなか です。",
+    "translation": "Mein Name ist Tanaka.",
+    "options": ["の", "は", "を", "が"],
+    "answer": "の",
+    "explanation": "の verbindet zwei Nomen: わたし の なまえ = „mein Name“ (wörtlich: der Name von mir)."
+  },
+  {
+    "id": "particles-n5-010",
+    "type": "mc",
+    "level": "N5",
+    "tags": ["verwendung"],
+    "question": "Wofür wird das Partikel は verwendet?",
+    "options": [
+      "Markiert das Thema des Satzes",
+      "Markiert das direkte Objekt",
+      "Markiert ein Ziel oder eine Richtung",
+      "Markiert einen Zeitpunkt"
+    ],
+    "answer": "Markiert das Thema des Satzes",
+    "explanation": "は stellt das Thema vor: „Was betrifft X, dann …“. Objekt = を, Richtung = へ・に, Zeitpunkte = に."
+  },
+  {
+    "id": "particles-n4-001",
+    "type": "mc",
+    "level": "N4",
+    "tags": ["fragepronomen"],
+    "question": "だれ ___ きますか。",
+    "translation": "Wer kommt?",
+    "options": ["が", "は", "を", "へ"],
+    "answer": "が",
+    "explanation": "Steht ein Fragepronomen (だれ „wer“, なに „was“, どれ „welches“) im Subjekt, folgt が statt は: だれ が きますか."
+  },
+  {
+    "id": "particles-n4-002",
+    "type": "mc",
+    "level": "N4",
+    "tags": ["subjekt"],
+    "question": "あめ ___ ふって います。",
+    "translation": "Es regnet.",
+    "options": ["は", "が", "を", "に"],
+    "answer": "が",
+    "explanation": "Bei Naturphänomenen (Regen, Schnee, Wind) steht das Subjekt mit が: あめ が ふります (der Regen fällt)."
+  },
+  {
+    "id": "particles-n4-003",
+    "type": "mc",
+    "level": "N4",
+    "tags": ["mittel"],
+    "question": "バス ___ がっこう へ いきます。",
+    "translation": "Ich fahre mit dem Bus zur Schule.",
+    "options": ["を", "に", "で", "と"],
+    "answer": "で",
+    "explanation": "で markiert auch das MITTEL: Verkehrsmittel (バス で – mit dem Bus) und Werkzeuge (はし で – mit Essstäbchen)."
+  },
+  {
+    "id": "particles-n4-004",
+    "type": "mc",
+    "level": "N4",
+    "tags": ["auch"],
+    "question": "たなかさん は がくせい です。\nすずきさん ___ がくせい です。",
+    "translation": "Herr Tanaka ist Student. Herr Suzuki ist auch Student.",
+    "options": ["は", "も", "が", "を"],
+    "answer": "も",
+    "explanation": "も („auch“) ersetzt は oder が: すずきさん も = Herr Suzuki auch."
+  }
+]
