@@ -1,7 +1,8 @@
 // ------------------------------------------------------------
-// app.js – root component: loads all questions, holds the filter
-// state, the per-round limit, and switches between phases
-// (start | quiz | summary).
+// app.js – root component: loads questions + grammar dossier,
+// holds filter state, per-round limit, and switches between
+// phases (start | quiz | summary | dossier) plus the grammar
+// modal overlay.
 // ------------------------------------------------------------
 
 function Header() {
@@ -86,7 +87,8 @@ function LimitPicker({ limit, onLimit, custom, onCustom }) {
 }
 
 // ------------------------------------------------------------
-// StartScreen – filters + limit + start button on the home page.
+// StartScreen – filters + limit + start button on the home page,
+// plus a teaser card that opens the grammar dossier.
 // ------------------------------------------------------------
 function StartScreen({
   data,
@@ -103,49 +105,72 @@ function StartScreen({
   onCustom,
   startDisabled,
   onStart,
+  grammarCount,
+  onOpenDossier,
 }) {
   return (
-    <section className="card start-card">
-      <h2>Session zusammenstellen</h2>
-      <p className="start-help">
-        Wähle Niveau und Module und lege fest, wie viele Fragen pro Runde
-        drankommen. Die Fragen werden gemischt und nacheinander gestellt – mit
-        Sofort-Feedback und Erklärung.
-      </p>
-      <FilterPanel
-        filter={filter}
-        onChange={onFilterChange}
-        levels={levels}
-        modules={modules}
-        moduleIndex={data.moduleIndex}
-        counts={counts}
-      />
-      <LimitPicker
-        limit={limit}
-        onLimit={onLimit}
-        custom={custom}
-        onCustom={onCustom}
-      />
-      <div className="start-actions">
-        <p className={"start-count" + (filteredCount === 0 ? " is-empty" : "")}>
-          {filteredCount === 0
-            ? "Keine Fragen für diese Auswahl"
-            : "Runde: " +
-              pluralQuestions(roundCount) +
-              (roundCount < filteredCount
-                ? " (aus " + filteredCount + " verfügbaren)"
-                : "")}
+    <React.Fragment>
+      <section className="card start-card">
+        <h2>Session zusammenstellen</h2>
+        <p className="start-help">
+          Wähle Niveau und Module und lege fest, wie viele Fragen pro Runde
+          drankommen. Die Fragen werden gemischt und nacheinander gestellt – mit
+          Sofort-Feedback und Erklärung.
         </p>
-        <button
-          type="button"
-          className="btn btn-primary btn-big"
-          disabled={startDisabled}
-          onClick={onStart}
-        >
-          Session starten
-        </button>
-      </div>
-    </section>
+        <FilterPanel
+          filter={filter}
+          onChange={onFilterChange}
+          levels={levels}
+          modules={modules}
+          moduleIndex={data.moduleIndex}
+          counts={counts}
+        />
+        <LimitPicker
+          limit={limit}
+          onLimit={onLimit}
+          custom={custom}
+          onCustom={onCustom}
+        />
+        <div className="start-actions">
+          <p
+            className={"start-count" + (filteredCount === 0 ? " is-empty" : "")}
+          >
+            {filteredCount === 0
+              ? "Keine Fragen für diese Auswahl"
+              : "Runde: " +
+                pluralQuestions(roundCount) +
+                (roundCount < filteredCount
+                  ? " (aus " + filteredCount + " verfügbaren)"
+                  : "")}
+          </p>
+          <button
+            type="button"
+            className="btn btn-primary btn-big"
+            disabled={startDisabled}
+            onClick={onStart}
+          >
+            Session starten
+          </button>
+        </div>
+      </section>
+
+      {grammarCount > 0 && (
+        <section className="card dossier-teaser">
+          <h2>Grammatik-Dossier</h2>
+          <p className="start-help">
+            Erklärungen und Beispielsätze zum Nachschlagen – {grammarCount}{" "}
+            Punkte. Auch direkt auf jeder Fragekarte aufrufbar.
+          </p>
+          <button
+            type="button"
+            className="btn btn-ghost"
+            onClick={onOpenDossier}
+          >
+            📖 Dossier öffnen
+          </button>
+        </section>
+      )}
+    </React.Fragment>
   );
 }
 
@@ -153,24 +178,27 @@ function App() {
   const [data, setData] = React.useState(null); // { moduleIndex, questions }
   const [error, setError] = React.useState(null);
   const [filter, setFilter] = React.useState({ levels: {}, modules: {} });
-  const [phase, setPhase] = React.useState("start"); // start | quiz | summary
+  const [phase, setPhase] = React.useState("start"); // start | quiz | summary | dossier
   const [session, setSession] = React.useState(null); // { questions, results }
   const [limit, setLimit] = React.useState(10); // number or null = all
   const [custom, setCustom] = React.useState(""); // text in the custom input
+  const [grammar, setGrammar] = React.useState({ points: [], index: null });
+  const [openPoint, setOpenPoint] = React.useState(null); // dossier point in the modal
 
   React.useEffect(() => {
-    loadAllQuestions()
-      .then((loaded) => {
+    Promise.all([loadAllQuestions(), loadGrammarPoints()])
+      .then(([loaded, grammarPoints]) => {
         // Default: only N5 (the entry level) active, every module on.
-        // Other levels stay visible but off – switching one on is a
-        // single click. "Nothing selected" would disable the start
-        // button and create a dead start screen.
         const levels = {};
         LEVELS.forEach((l) => (levels[l] = l === "N5"));
         const modules = {};
         Object.keys(loaded.moduleIndex).forEach((m) => (modules[m] = true));
         setFilter({ levels, modules });
         setData(loaded);
+        setGrammar({
+          points: grammarPoints,
+          index: buildGrammarIndex(grammarPoints),
+        });
       })
       .catch((err) => setError(err.message || String(err)));
   }, []);
@@ -224,6 +252,10 @@ function App() {
     setPhase("quiz");
   }
 
+  function openDossier() {
+    setPhase("dossier");
+  }
+
   return (
     <div className="app">
       <Header />
@@ -253,6 +285,8 @@ function App() {
             onCustom={setCustom}
             startDisabled={startDisabled}
             onStart={startSession}
+            grammarCount={grammar.points.length}
+            onOpenDossier={openDossier}
           />
         )}
 
@@ -260,6 +294,8 @@ function App() {
           <Quiz
             questions={session.questions}
             moduleIndex={data.moduleIndex}
+            grammarIndex={grammar.index}
+            onShowGrammar={setOpenPoint}
             onFinish={finishSession}
             onQuit={backToStart}
           />
@@ -274,7 +310,16 @@ function App() {
             onHome={backToStart}
           />
         )}
+
+        {data && phase === "dossier" && (
+          <Dossier points={grammar.points} onBack={backToStart} />
+        )}
       </main>
+
+      {openPoint && (
+        <GrammarModal point={openPoint} onClose={() => setOpenPoint(null)} />
+      )}
+
       <footer className="site-footer">
         <p>
           Läuft komplett im Browser – kein Account, keine Datenbank, kein

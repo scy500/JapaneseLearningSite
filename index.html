@@ -15,7 +15,9 @@
     <link rel="stylesheet" href="css/style.css" />
   </head>
   <body>
-    <div id="root"></div>
+    <div id="root">
+      <p class="loading">Skripte werden geladen …</p>
+    </div>
 
     <!-- React + Babel via CDN: no build step, everything runs in the
          browser. Important: relative paths (no leading "/") so the
@@ -31,48 +33,77 @@
     ></script>
     <script src="https://unpkg.com/@babel/standalone@7.24.7/babel.min.js"></script>
 
-    <!-- App scripts (order matters: utils -> renderers -> components -> app) -->
-    <script type="text/babel" data-presets="react" src="js/utils.js"></script>
-    <script
-      type="text/babel"
-      data-presets="react"
-      src="js/components/renderers/QuestionText.js"
-    ></script>
-    <script
-      type="text/babel"
-      data-presets="react"
-      src="js/components/renderers/MultipleChoice.js"
-    ></script>
-    <script
-      type="text/babel"
-      data-presets="react"
-      src="js/components/renderers/MultiSelect.js"
-    ></script>
-    <script
-      type="text/babel"
-      data-presets="react"
-      src="js/components/renderers/OrderInput.js"
-    ></script>
-    <script
-      type="text/babel"
-      data-presets="react"
-      src="js/components/QuestionCard.js"
-    ></script>
-    <script
-      type="text/babel"
-      data-presets="react"
-      src="js/components/FilterPanel.js"
-    ></script>
-    <script
-      type="text/babel"
-      data-presets="react"
-      src="js/components/Quiz.js"
-    ></script>
-    <script
-      type="text/babel"
-      data-presets="react"
-      src="js/components/Summary.js"
-    ></script>
-    <script type="text/babel" data-presets="react" src="js/app.js"></script>
+    <!-- Sequential boot loader: fetch -> transform JSX -> run, one
+         file at a time, strictly in order (utils first, app last).
+         Babel's own script-tag processing fetches external scripts
+         in parallel and evaluates them on arrival, which does NOT
+         guarantee order. No import/export: globals by design. -->
+    <script>
+      (async function () {
+        var FILES = [
+          "js/utils.js",
+          "js/components/renderers/QuestionText.js",
+          "js/components/renderers/MultipleChoice.js",
+          "js/components/renderers/MultiSelect.js",
+          "js/components/renderers/OrderInput.js",
+          "js/components/GrammarModal.js",
+          "js/components/Dossier.js",
+          "js/components/QuestionCard.js",
+          "js/components/FilterPanel.js",
+          "js/components/Quiz.js",
+          "js/components/Summary.js",
+          "js/app.js",
+        ];
+
+        var shown = false;
+
+        function showError(message) {
+          if (shown) return;
+          shown = true;
+          console.error(message);
+          var root = document.getElementById("root");
+          root.innerHTML =
+            '<div class="card error-card">' +
+            "<h2>Skripte konnten nicht geladen werden</h2>" +
+            "<p>" +
+            message +
+            "</p>" +
+            '<p class="hint">Details stehen in der Browser-Konsole (F12).</p>' +
+            "</div>";
+        }
+
+        // Surface runtime errors of the injected scripts as well
+        // (script elements do not throw into the surrounding code).
+        window.addEventListener("error", function (e) {
+          if (e && e.message) showError(String(e.message));
+        });
+
+        try {
+          for (var i = 0; i < FILES.length; i++) {
+            var file = FILES[i];
+            var res = await fetch(file);
+            if (!res.ok) {
+              throw new Error(
+                file +
+                  " → HTTP " +
+                  res.status +
+                  " (Datei vorhanden und gepusht?)",
+              );
+            }
+            var source = await res.text();
+            var compiled = Babel.transform(source, {
+              presets: ["react"],
+              sourceType: "script",
+              filename: file,
+            }).code;
+            var el = document.createElement("script");
+            el.textContent = compiled;
+            document.head.appendChild(el); // executes synchronously
+          }
+        } catch (err) {
+          showError(String((err && err.message) || err));
+        }
+      })();
+    </script>
   </body>
 </html>

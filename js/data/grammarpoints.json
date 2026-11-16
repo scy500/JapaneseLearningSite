@@ -1,0 +1,365 @@
+[
+  {
+    "id": "wa-topic",
+    "title": "は – Thema",
+    "level": "N5",
+    "short": "は (gesprochen „wa“) markiert das Thema des Satzes: Es steht hinter dem Nomen, über das der Satz etwas aussagt – „Was betrifft X, dann …“.",
+    "examples": [
+      { "ja": "わたし は がくせい です。", "de": "Ich bin Student." },
+      { "ja": "そら は あおい です。", "de": "Der Himmel ist blau." }
+    ],
+    "questionIds": [
+      "particles-n5-001",
+      "particles-n5-010",
+      "particles-n5-013",
+      "particles-n5-014",
+      "particles-n5-015",
+      "particles-n5-019",
+      "particles-n5-030",
+      "particles-n5-031",
+      "particles-n5-032"
+    ]
+  },
+  {
+    "id": "wo-object",
+    "title": "を – direktes Objekt",
+    "level": "N5",
+    "short": "を hängt das direkte Objekt an das Verb: das Ding, mit dem etwas passiert (essen, trinken, lesen …).",
+    "examples": [
+      { "ja": "みず を のみます。", "de": "Ich trinke Wasser." },
+      { "ja": "わたし は さかな を たべます。", "de": "Ich esse Fisch." }
+    ],
+    "questionIds": ["particles-n5-002"]
+  },
+  {
+    "id": "ni-time",
+    "title": "に – Zeitpunkt",
+    "level": "N5",
+    "short": "に markiert konkrete Zeitpunkte (Uhrzeiten, Tage, Daten). Bei ungenauen Angaben wie きょう (heute) oder まいあさ (jeden Morgen) steht kein に.",
+    "examples": [
+      { "ja": "しちじ に おきます。", "de": "Ich stehe um 7 Uhr auf." },
+      {
+        "ja": "じゅぎょう は さんじ に はじまります。",
+        "de": "Der Unterricht beginnt um 3 Uhr."
+      }
+    ],
+    "questionIds": ["particles-n5-003", "particles-n5-024"]
+  },
+  {
+    "id": "ni-location",
+    "title": "に – Ort (Existenz / Wohnen)",
+    "level": "N5",
+    "short": "に markiert den Ort, an dem sich jemand oder etwas befindet – bei います/あります und beim Wohnen (すんで います). Für Bewegungsziele siehe へ.",
+    "examples": [
+      { "ja": "いぬ は いえ に います。", "de": "Der Hund ist im Haus." },
+      {
+        "ja": "わたし は ドイツ に すんで います。",
+        "de": "Ich wohne in Deutschland."
+      }
+    ],
+    "questionIds": [
+      "particles-n5-017",
+      "particles-n5-020",
+      "particles-n5-021",
+      "particles-n5-022",
+      "particles-n5-023",
+      "particles-n5-028",
+      "particles-n5-029"
+    ]
+  },
+  {
+    "id": "de-place",
+    "title": "で – Handlungsort & Mittel",
+    "level": "N5",
+    "short": "で markiert den Ort, an dem eine Handlung passiert – und das Mittel: Verkehrsmittel (バス で) oder Werkzeug (はし で).",
+    "examples": [
+      {
+        "ja": "としょかん で べんきょうします。",
+        "de": "Ich lerne in der Bibliothek."
+      },
+      {
+        "ja": "バス で がっこう へ いきます。",
+        "de": "Ich fahre mit dem Bus zur Schule."
+      }
+    ],
+    "questionIds": ["particles-n5-004", "particles-n5-005", "particles-n4-003"]
+  },
+  {
+    "id": "e-direction",
+    "title": "へ – Richtung / Ziel",
+    "level": "N5",
+    "short": "へ (gesprochen „e“) markiert Richtung oder Ziel einer Bewegung. に kann bei Bewegungsverben dasselbe ausdrücken – へ betont die Richtung.",
+    "examples": [
+      { "ja": "とうきょう へ いきます。", "de": "Ich gehe nach Tokio." },
+      {
+        "ja": "にほん へ いきたい です。",
+        "de": "Ich möchte nach Japan (gehen)."
+      }
+    ],
+    "questionIds": ["particles-n5-008", "particles-n5-025", "translate-n5-006"]
+  },
+  {
+    "id": "to-with",
+    "title": "と – zusammen mit / und",
+    "level": "N5",
+    "short": "と heißt „und“ (zwischen zwei Nomen) und „zusammen mit“ vor einer Person: ともだち と = mit einem Freund.",
+    "examples": [
+      {
+        "ja": "ともだち と えいが を みます。",
+        "de": "Ich schaue mit einem Freund einen Film."
+      },
+      { "ja": "ぺん と ほん", "de": "ein Stift und ein Buch" }
+    ],
+    "questionIds": ["particles-n5-006"]
+  },
+  {
+    "id": "no-possessive",
+    "title": "の – Zugehörigkeit",
+    "level": "N5",
+    "short": "の verbindet zwei Nomen: わたし の くるま = das Auto von mir (= mein Auto). Das erste Nomen beschreibt das zweite.",
+    "examples": [
+      {
+        "ja": "わたし の かみ は くろい です。",
+        "de": "Meine Haare sind schwarz."
+      },
+      { "ja": "くるま の ほん", "de": "das Buch über Autos / das Autobuch" }
+    ],
+    "questionIds": [
+      "particles-n5-009",
+      "particles-n5-011",
+      "particles-n5-012",
+      "particles-n5-018",
+      "particles-n5-026",
+      "particles-n5-027",
+      "grammar-n5-008",
+      "grammar-n5-009",
+      "grammar-n5-010",
+      "grammar-n5-011",
+      "translate-n5-007"
+    ]
+  },
+  {
+    "id": "kara-made",
+    "title": "から … まで – von … bis",
+    "level": "N5",
+    "short": "から markiert den Startpunkt („von“), まで das Ende („bis“) – funktioniert für Orte und Zeiten.",
+    "examples": [
+      {
+        "ja": "うち から えき まで あるきます。",
+        "de": "Ich laufe von zu Hause bis zum Bahnhof."
+      },
+      {
+        "ja": "しちじ から はちじ まで べんきょうします。",
+        "de": "Ich lerne von 7 bis 8 Uhr."
+      }
+    ],
+    "questionIds": ["particles-n5-007"]
+  },
+  {
+    "id": "mo-also",
+    "title": "も – auch",
+    "level": "N5",
+    "short": "も („auch“) ersetzt は oder が: すずきさん も = Herr Suzuki auch.",
+    "examples": [
+      {
+        "ja": "すずきさん も がくせい です。",
+        "de": "Herr Suzuki ist auch Student."
+      },
+      { "ja": "わたし も ねこ が すき です。", "de": "Ich mag Katzen auch." }
+    ],
+    "questionIds": ["particles-n4-004"]
+  },
+  {
+    "id": "ga-subject",
+    "title": "が – Subjekt",
+    "level": "N5",
+    "short": "が markiert das Subjekt, wenn es neu oder betont ist: bei Fragepronomen (だれ が?), bei Naturphänomenen (あめ が ふります) und bei すき – dort steht das Gemochte mit が.",
+    "examples": [
+      { "ja": "だれ が きますか。", "de": "Wer kommt?" },
+      { "ja": "わたし は ねこ が すき です。", "de": "Ich mag Katzen." }
+    ],
+    "questionIds": ["particles-n4-001", "particles-n4-002", "translate-n5-008"]
+  },
+  {
+    "id": "ka-question",
+    "title": "か – Frage",
+    "level": "N5",
+    "short": "か am Satzende macht aus einer Aussage eine Ja/Nein-Frage – die Wortstellung bleibt gleich.",
+    "examples": [
+      { "ja": "これは ぺん です か。", "de": "Ist das ein Stift?" },
+      { "ja": "ねこ は かわいい です か。", "de": "Sind Katzen süß?" }
+    ],
+    "questionIds": ["particles-n5-016", "grammar-n5-021"]
+  },
+  {
+    "id": "desu",
+    "title": "X は Y です – X ist Y",
+    "level": "N5",
+    "short": "Das Grundmuster: Thema + は + Prädikat + です. Funktioniert für Eigenschaften, Nationalität, Beruf, Uhrzeit – alles.",
+    "examples": [
+      { "ja": "くるま は くろい です。", "de": "Das Auto ist schwarz." },
+      { "ja": "いま は ろくじ です。", "de": "Es ist jetzt 6 Uhr." }
+    ],
+    "questionIds": [
+      "grammar-n5-001",
+      "grammar-n5-002",
+      "grammar-n5-003",
+      "grammar-n5-004",
+      "grammar-n5-005",
+      "grammar-n5-006",
+      "grammar-n5-007",
+      "grammar-n5-028",
+      "grammar-n5-029",
+      "translate-n5-001",
+      "translate-n5-005",
+      "translate-n5-009"
+    ]
+  },
+  {
+    "id": "janai",
+    "title": "じゃない です – Verneinung",
+    "level": "N5",
+    "short": "Nomen-Sätze verneint man mit じゃない です (locker), じゃありません (formell) oder では ありません (sehr formell) – Bedeutung identisch.",
+    "examples": [
+      { "ja": "これは ぺん じゃない です。", "de": "Das ist kein Stift." },
+      {
+        "ja": "わたし は にほんじん じゃない です。",
+        "de": "Ich bin kein Japaner."
+      }
+    ],
+    "questionIds": [
+      "grammar-n5-020",
+      "grammar-n5-022",
+      "grammar-n5-023",
+      "translate-n5-004"
+    ]
+  },
+  {
+    "id": "iru-arimasu",
+    "title": "います / あります – existieren",
+    "level": "N5",
+    "short": "います = sich befinden für Lebewesen (Menschen, Tiere), あります für Gegenstände. Der Existenzort steht mit に.",
+    "examples": [
+      { "ja": "いぬ は にわ に います。", "de": "Der Hund ist im Garten." },
+      {
+        "ja": "あそこ に くるま が あります。",
+        "de": "Dort hinten ist ein Auto."
+      }
+    ],
+    "questionIds": [
+      "grammar-n5-026",
+      "grammar-n5-027",
+      "translate-n5-002",
+      "translate-n5-010"
+    ]
+  },
+  {
+    "id": "kore-sore",
+    "title": "これ / それ / あれ / どれ",
+    "level": "N5",
+    "short": "これ = das hier (bei mir), それ = das da (bei dir), あれ = das dort hinten, どれ = welches. Vor einem Nomen: この / その / あの / どの.",
+    "examples": [
+      { "ja": "これは ぺん です。", "de": "Das (hier) ist ein Stift." },
+      { "ja": "どの くるま ですか。", "de": "Welches Auto ist es?" }
+    ],
+    "questionIds": [
+      "grammar-n5-012",
+      "grammar-n5-013",
+      "grammar-n5-014",
+      "grammar-n5-015",
+      "grammar-n5-016",
+      "translate-n5-003"
+    ]
+  },
+  {
+    "id": "koko-soko",
+    "title": "ここ / そこ / あそこ / どこ",
+    "level": "N5",
+    "short": "Die Ortsformen: ここ = hier (bei mir), そこ = dort (bei dir), あそこ = dort hinten, どこ = wo.",
+    "examples": [
+      { "ja": "とり は ここ に います。", "de": "Der Vogel ist hier." },
+      { "ja": "えき は どこ ですか。", "de": "Wo ist der Bahnhof?" }
+    ],
+    "questionIds": ["grammar-n5-017", "grammar-n5-018", "grammar-n5-019"]
+  },
+  {
+    "id": "ne-yo",
+    "title": "ね / よ – Satzenden",
+    "level": "N5",
+    "short": "ね am Satzende sucht die Zustimmung des Gegenübers („…, ne? / oder?“), よ verstärkt die eigene Aussage – ähnlich wie ein Ausrufezeichen.",
+    "examples": [
+      { "ja": "いぬ は かわいい です ね。", "de": "Der Hund ist süß, ne?" },
+      { "ja": "これは にく です よ。", "de": "Das IST Fleisch!" }
+    ],
+    "questionIds": ["grammar-n5-024", "grammar-n5-025"]
+  },
+  {
+    "id": "ru-verbs",
+    "title": "る-Verben",
+    "level": "N5",
+    "short": "る-Verben enden in der Grundform auf -える/-いる (たべる, みる). ます-Form: る → ます (たべます). Verneinung: る → ない (たべない). Vergangenheit: たべました / verneint たべませんでした.",
+    "examples": [
+      { "ja": "わたし は ピザ を たべます。", "de": "Ich esse Pizza." },
+      { "ja": "わたし は えいが を みます。", "de": "Ich schaue einen Film." }
+    ],
+    "questionIds": [
+      "verbs-n5-001",
+      "verbs-n5-002",
+      "verbs-n5-003",
+      "verbs-n5-004",
+      "verbs-n5-005",
+      "verbs-n5-022",
+      "verbs-n5-023",
+      "verbs-n5-024"
+    ]
+  },
+  {
+    "id": "u-verbs",
+    "title": "う-Verben",
+    "level": "N5",
+    "short": "う-Verben enden auf -u (いく, のむ, まつ). ます-Form: u → i + ます (いく → いきます). Verneinung: u → a + ない (いかない) – Sonderfall bei う: かう → かわない (nie かあない). Vergangenheit: いきました / いきませんでした.",
+    "examples": [
+      {
+        "ja": "わたし は がっこう に いきます。",
+        "de": "Ich gehe zur Schule."
+      },
+      { "ja": "みず を のみます。", "de": "Ich trinke Wasser." }
+    ],
+    "questionIds": [
+      "verbs-n5-006",
+      "verbs-n5-007",
+      "verbs-n5-008",
+      "verbs-n5-009",
+      "verbs-n5-010",
+      "verbs-n5-011",
+      "verbs-n5-012",
+      "verbs-n5-013",
+      "verbs-n5-014",
+      "verbs-n5-015",
+      "verbs-n5-016",
+      "verbs-n5-017",
+      "verbs-n5-018",
+      "verbs-n5-019",
+      "verbs-n5-020",
+      "verbs-n5-021"
+    ]
+  },
+  {
+    "id": "suru-kuru",
+    "title": "する / くる – unregelmäßige Verben",
+    "level": "N5",
+    "short": "する (machen) und くる (kommen) sind unregelmäßig: します / しません / しました und きます / きません / きました (Grundform: こない). Nomen + する macht ein Nomen zum Verb: べんきょう します = lernen.",
+    "examples": [
+      { "ja": "わたし は ゲーム を します。", "de": "Ich spiele ein Spiel." },
+      { "ja": "ともだち が きます。", "de": "Ein Freund kommt." }
+    ],
+    "questionIds": [
+      "verbs-n5-025",
+      "verbs-n5-026",
+      "verbs-n5-027",
+      "verbs-n5-028",
+      "verbs-n5-029",
+      "verbs-n5-030"
+    ]
+  }
+]

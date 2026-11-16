@@ -1,15 +1,24 @@
 // ------------------------------------------------------------
 // Quiz – runs one session: current question, selection state,
 // instant feedback, live score, progress bar, next button.
+// Resolves the grammar point per question for the dossier link.
 // ------------------------------------------------------------
 
-function Quiz({ questions, moduleIndex, onFinish, onQuit }) {
+function Quiz({
+  questions,
+  moduleIndex,
+  grammarIndex,
+  onShowGrammar,
+  onFinish,
+  onQuit,
+}) {
   const [current, setCurrent] = React.useState(0);
   const [selected, setSelected] = React.useState(null);
   const [results, setResults] = React.useState([]);
 
   const question = questions[current];
   const total = questions.length;
+  const grammarPoint = grammarPointFor(question, grammarIndex);
   const correctCount = results.filter((r) => r.correct).length;
   const answered = selected !== null;
 
@@ -60,6 +69,8 @@ function Quiz({ questions, moduleIndex, onFinish, onQuit }) {
         moduleIndex={moduleIndex}
         selected={selected}
         onSelect={handleSelect}
+        grammarPoint={grammarPoint}
+        onShowGrammar={onShowGrammar}
       />
 
       <div className="quiz-actions">

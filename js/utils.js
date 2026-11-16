@@ -191,3 +191,57 @@ function moduleLabel(moduleIndex, id) {
 function pluralQuestions(n) {
   return n === 1 ? "1 Frage" : n + " Fragen";
 }
+// ------------------------------------------------------------
+// Grammar dossier (js/data/grammarpoints.json).
+// ------------------------------------------------------------
+
+// Load the grammar dossier. A missing or broken file is not an
+// error: the app simply runs without the dossier.
+async function loadGrammarPoints() {
+  try {
+    const res = await fetch(DATA_DIR + "/grammarpoints.json");
+    if (!res.ok) {
+      console.warn(
+        "grammarpoints.json could not be loaded (HTTP " +
+          res.status +
+          ") – dossier disabled.",
+      );
+      return [];
+    }
+    const raw = await res.json();
+    return (Array.isArray(raw) ? raw : []).filter(
+      (p) =>
+        p &&
+        p.id &&
+        p.title &&
+        p.short &&
+        Array.isArray(p.examples) &&
+        p.examples.length >= 2,
+    );
+  } catch (err) {
+    console.warn("grammarpoints.json is broken – dossier disabled.", err);
+    return [];
+  }
+}
+
+// Index the dossier for lookups: by point id and reverse by
+// question id (each point lists the questions it explains).
+function buildGrammarIndex(points) {
+  const byId = {};
+  const byQuestionId = {};
+  (points || []).forEach((p) => {
+    byId[p.id] = p;
+    (p.questionIds || []).forEach((qid) => {
+      if (!byQuestionId[qid]) byQuestionId[qid] = p.id;
+    });
+  });
+  return { byId, byQuestionId };
+}
+
+// Resolve the dossier point for a question. An explicit
+// "grammar" field on the question wins over the reverse map.
+function grammarPointFor(question, index) {
+  if (!index || !question) return null;
+  const id = question.grammar || index.byQuestionId[question.id];
+  return id ? index.byId[id] || null : null;
+}

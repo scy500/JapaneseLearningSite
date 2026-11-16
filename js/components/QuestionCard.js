@@ -1,10 +1,17 @@
 // ------------------------------------------------------------
 // QuestionCard – frame around one question: meta badges (level,
-// module), optional image, question text, the renderer chosen
-// by "type", and the feedback box with explanation.
+// module), an optional grammar dossier link, optional image,
+// question text, the renderer chosen by "type", feedback box.
 // ------------------------------------------------------------
 
-function QuestionCard({ question, moduleIndex, selected, onSelect }) {
+function QuestionCard({
+  question,
+  moduleIndex,
+  selected,
+  onSelect,
+  grammarPoint,
+  onShowGrammar,
+}) {
   const answered = selected !== null && selected !== undefined;
   const correct = answered && checkAnswer(question, selected);
 
@@ -45,6 +52,15 @@ function QuestionCard({ question, moduleIndex, selected, onSelect }) {
         <span className="badge badge-module">
           {moduleLabel(moduleIndex, question.module)}
         </span>
+        {grammarPoint && onShowGrammar && (
+          <button
+            type="button"
+            className="grammar-link"
+            onClick={() => onShowGrammar(grammarPoint)}
+          >
+            📖 {grammarPoint.title}
+          </button>
+        )}
       </div>
 
       {question.image && (
