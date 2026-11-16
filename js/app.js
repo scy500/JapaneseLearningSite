@@ -305,6 +305,8 @@ function App() {
           <Summary
             results={session.results}
             moduleIndex={data.moduleIndex}
+            grammarIndex={grammar.index}
+            onShowGrammar={setOpenPoint}
             onRepeatMistakes={repeatMistakes}
             onRestart={startSession}
             onHome={backToStart}

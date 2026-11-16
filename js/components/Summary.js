@@ -1,13 +1,16 @@
 // ------------------------------------------------------------
 // Summary – end-of-session result: score, per-module statistics,
-// an expandable mistake list (your answer vs. correct answer) and
-// a "repeat mistakes" round. Everything lives in session state;
-// nothing is stored anywhere.
+// an expandable mistake list (your answer vs. correct answer)
+// with a grammar dossier link per mistake, and a "repeat
+// mistakes" round. Everything lives in session state; nothing
+// is stored anywhere.
 // ------------------------------------------------------------
 
 function Summary({
   results,
   moduleIndex,
+  grammarIndex,
+  onShowGrammar,
   onRepeatMistakes,
   onRestart,
   onHome,
@@ -113,35 +116,51 @@ function Summary({
 
       {showMistakes && (
         <div className="mistakes-list">
-          {mistakes.map((r) => (
-            <article className="mistake-item" key={r.id}>
-              <div className="question-meta">
-                <span className="badge badge-level">{r.question.level}</span>
-                <span className="badge badge-module">
-                  {moduleLabel(moduleIndex, r.question.module)}
-                </span>
-              </div>
-              <p className="mistake-question">{questionText(r.question)}</p>
-              <p className="mistake-line">
-                Deine Antwort:{" "}
-                <strong className="is-bad">{formatSelected(r.selected)}</strong>
-              </p>
-              <p className="mistake-line">
-                Richtig:{" "}
-                <strong className="is-ok">
-                  {getAnswers(r.question).join(" ・ ")}
-                </strong>
-              </p>
-              {r.question.translation && (
-                <p className="mistake-translation">
-                  Übersetzung: {r.question.translation}
+          {mistakes.map((r) => {
+            const point = grammarPointFor(r.question, grammarIndex);
+            return (
+              <article className="mistake-item" key={r.id}>
+                <div className="question-meta">
+                  <span className="badge badge-level">{r.question.level}</span>
+                  <span className="badge badge-module">
+                    {moduleLabel(moduleIndex, r.question.module)}
+                  </span>
+                  {point && onShowGrammar && (
+                    <button
+                      type="button"
+                      className="grammar-link"
+                      onClick={() => onShowGrammar(point)}
+                    >
+                      📖 {point.title}
+                    </button>
+                  )}
+                </div>
+                <p className="mistake-question">{questionText(r.question)}</p>
+                <p className="mistake-line">
+                  Deine Antwort:{" "}
+                  <strong className="is-bad">
+                    {formatSelected(r.selected)}
+                  </strong>
                 </p>
-              )}
-              {r.question.explanation && (
-                <p className="mistake-explanation">{r.question.explanation}</p>
-              )}
-            </article>
-          ))}
+                <p className="mistake-line">
+                  Richtig:{" "}
+                  <strong className="is-ok">
+                    {getAnswers(r.question).join(" ・ ")}
+                  </strong>
+                </p>
+                {r.question.translation && (
+                  <p className="mistake-translation">
+                    Übersetzung: {r.question.translation}
+                  </p>
+                )}
+                {r.question.explanation && (
+                  <p className="mistake-explanation">
+                    {r.question.explanation}
+                  </p>
+                )}
+              </article>
+            );
+          })}
         </div>
       )}
 

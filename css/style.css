@@ -939,3 +939,7 @@ button:focus-visible,
   color: var(--muted);
   font-style: italic;
 }
+/* ---------- Dossier: level filter ---------- */
+.dossier-filter {
+  padding: 0 4px 16px;
+}
