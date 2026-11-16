@@ -5,6 +5,8 @@ questions with instant feedback, filters by module and level, and a
 configurable number of questions per round. Runs entirely in the
 browser – no backend, no accounts, no database.
 
+https://scy500.github.io/JapaneseLearningSite/
+
 ## Tech
 
 - React 18 + Babel Standalone via CDN (no build step, no npm)
