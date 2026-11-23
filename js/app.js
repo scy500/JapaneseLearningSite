@@ -209,14 +209,14 @@ function App() {
   );
 
   const counts = React.useMemo(() => {
-    // Faceted counts: the module chips only count questions whose
-    // LEVEL is active, the level chips only count questions whose
-    // MODULE is active – so every number follows the selection.
+    // Level chips: totals – every question of that level, regardless
+    // of module selection ("N5" = how many N5 questions exist at all).
+    // Module chips: faceted – count questions whose LEVEL is active,
+    // so the module numbers follow the level selection.
     const levels = {};
     const modules = {};
     (data ? data.questions : []).forEach((q) => {
-      if (filter.modules[q.module])
-        levels[q.level] = (levels[q.level] || 0) + 1;
+      levels[q.level] = (levels[q.level] || 0) + 1;
       if (filter.levels[q.level])
         modules[q.module] = (modules[q.module] || 0) + 1;
     });
