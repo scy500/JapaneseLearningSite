@@ -1,7 +1,11 @@
 // ------------------------------------------------------------
 // QuestionCard – frame around one question: meta badges (level,
-// module), an optional grammar dossier link, optional image,
-// question text, the renderer chosen by "type", feedback box.
+// module), optional image, question text, the renderer chosen
+// by "type", and the feedback box with explanation.
+//
+// Spoiler policy: the grammar dossier link stays hidden until
+// the question is answered – the point title would give away
+// the answer (e.g. "は – Thema" before a は question).
 // ------------------------------------------------------------
 
 function QuestionCard({
@@ -37,6 +41,13 @@ function QuestionCard({
         onSelect={onSelect}
       />
     );
+  } else if (
+    question.type === "listen-order" ||
+    question.type === "listen-mc"
+  ) {
+    body = (
+      <Listening question={question} selected={selected} onSelect={onSelect} />
+    );
   } else {
     body = (
       <p className="hint">
@@ -52,7 +63,7 @@ function QuestionCard({
         <span className="badge badge-module">
           {moduleLabel(moduleIndex, question.module)}
         </span>
-        {grammarPoint && onShowGrammar && (
+        {answered && grammarPoint && onShowGrammar && (
           <button
             type="button"
             className="grammar-link"
@@ -81,6 +92,11 @@ function QuestionCard({
             <p className="feedback-answer">
               Richtige Antwort:{" "}
               <strong>{getAnswers(question).join(" ・ ")}</strong>
+            </p>
+          )}
+          {question.speech && (
+            <p className="feedback-translation">
+              Gehörter Text: {question.speech}
             </p>
           )}
           {question.translation && (

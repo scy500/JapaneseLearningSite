@@ -428,5 +428,92 @@
     ],
     "answer": "Woher kommst du?",
     "explanation": "しゅっしん = Herkunft: どこの出身ですか = aus welcher Gegend stammst du?"
+  },
+  {
+    "id": "grammar-n5-031",
+    "type": "mc",
+    "level": "N5",
+    "tags": ["negation"],
+    "question": "これは りんご ___。",
+    "translation": "Das ist kein Apfel.",
+    "options": ["じゃない です", "です", "でした", "ました"],
+    "answer": "じゃない です",
+    "explanation": "Nomen-Verneinung: じゃない です (locker) / じゃありません (formell)."
+  },
+  {
+    "id": "grammar-n5-032",
+    "type": "mc",
+    "level": "N5",
+    "tags": ["iru-arimasu", "verwendung"],
+    "question": "Wann benutzt man あります statt います?",
+    "options": [
+      "Bei Gegenständen (und abstrakten Dingen)",
+      "Bei Menschen",
+      "Bei Tieren",
+      "Niemals – あります gibt es nicht"
+    ],
+    "answer": "Bei Gegenständen (und abstrakten Dingen)",
+    "explanation": "Lebewesen → います. Gegenstände → あります: あそこ に くるま が あります."
+  },
+  {
+    "id": "grammar-n5-033",
+    "type": "mc",
+    "level": "N5",
+    "tags": ["ort"],
+    "question": "あそこ に くるま が あります。",
+    "options": [
+      "Dort hinten ist ein Auto.",
+      "Hier ist ein Auto.",
+      "Dort bei dir ist ein Fahrrad.",
+      "Wo ist das Auto?"
+    ],
+    "answer": "Dort hinten ist ein Auto.",
+    "explanation": "あそこ = dort hinten (weit weg von beiden), あります = es gibt (Gegenstand)."
+  },
+  {
+    "id": "grammar-n5-034",
+    "type": "mc",
+    "level": "N5",
+    "tags": ["ort", "frage"],
+    "question": "えき は ___ です か。",
+    "translation": "Wo ist der Bahnhof?",
+    "options": ["どこ", "どれ", "だれ", "どの"],
+    "answer": "どこ",
+    "explanation": "どこ = wo (Ort). どれ = welches (Ding), だれ = wer, どの = welches (vor Nomen)."
+  },
+  {
+    "id": "grammar-n5-035",
+    "type": "mc",
+    "level": "N5",
+    "tags": ["ne-yo"],
+    "question": "Wie endet man den Satz, wenn man die Zustimmung des Gegenübers sucht?\nあの こ は かわいい です ___。",
+    "options": ["ね", "よ", "か", "な"],
+    "answer": "ね",
+    "explanation": "ね = „…, ne? / oder?“. よ würde die Aussage betonen („…!“), か wäre eine Frage."
+  },
+  {
+    "id": "grammar-n5-036",
+    "type": "mc",
+    "level": "N5",
+    "tags": ["ne-yo"],
+    "question": "Wie endet man den Satz, wenn man die Aussage betonen will?\nこれは にく です ___。",
+    "options": ["よ", "ね", "か", "な"],
+    "answer": "よ",
+    "explanation": "よ wirkt wie ein Ausrufezeichen: これは にく です よ! = Das IST Fleisch!"
+  },
+  {
+    "id": "grammar-n5-037",
+    "type": "mc",
+    "level": "N5",
+    "tags": ["ne-yo", "verstehen"],
+    "question": "Welcher Satz sucht die Zustimmung des Gesprächspartners?",
+    "options": [
+      "いぬ は かわいい です ね。",
+      "いぬ は かわいい です よ。",
+      "いぬ は かわいい です か。",
+      "いぬ は かわいい じゃない です。"
+    ],
+    "answer": "いぬ は かわいい です ね。",
+    "explanation": "ね sucht Bestätigung („…, ne?“), よ betont, か fragt, じゃない です verneint."
   }
 ]

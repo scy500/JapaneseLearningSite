@@ -29,7 +29,13 @@
       { "ja": "みず を のみます。", "de": "Ich trinke Wasser." },
       { "ja": "わたし は さかな を たべます。", "de": "Ich esse Fisch." }
     ],
-    "questionIds": ["particles-n5-002"]
+    "questionIds": [
+      "particles-n5-002",
+      "particles-n5-033",
+      "particles-n5-034",
+      "particles-n5-035",
+      "particles-n5-036"
+    ]
   },
   {
     "id": "ni-time",
@@ -43,7 +49,13 @@
         "de": "Der Unterricht beginnt um 3 Uhr."
       }
     ],
-    "questionIds": ["particles-n5-003", "particles-n5-024"]
+    "questionIds": [
+      "particles-n5-003",
+      "particles-n5-024",
+      "particles-n5-037",
+      "particles-n5-038",
+      "particles-n5-039"
+    ]
   },
   {
     "id": "ni-location",
@@ -82,7 +94,13 @@
         "de": "Ich fahre mit dem Bus zur Schule."
       }
     ],
-    "questionIds": ["particles-n5-004", "particles-n5-005", "particles-n4-003"]
+    "questionIds": [
+      "particles-n5-004",
+      "particles-n5-005",
+      "particles-n4-003",
+      "particles-n5-040",
+      "particles-n5-041"
+    ]
   },
   {
     "id": "e-direction",
@@ -96,7 +114,13 @@
         "de": "Ich möchte nach Japan (gehen)."
       }
     ],
-    "questionIds": ["particles-n5-008", "particles-n5-025", "translate-n5-006"]
+    "questionIds": [
+      "particles-n5-008",
+      "particles-n5-025",
+      "translate-n5-006",
+      "particles-n5-042",
+      "particles-n5-043"
+    ]
   },
   {
     "id": "to-with",
@@ -110,7 +134,13 @@
       },
       { "ja": "ぺん と ほん", "de": "ein Stift und ein Buch" }
     ],
-    "questionIds": ["particles-n5-006"]
+    "questionIds": [
+      "particles-n5-006",
+      "particles-n5-044",
+      "particles-n5-045",
+      "particles-n5-046",
+      "particles-n5-047"
+    ]
   },
   {
     "id": "no-possessive",
@@ -153,7 +183,13 @@
         "de": "Ich lerne von 7 bis 8 Uhr."
       }
     ],
-    "questionIds": ["particles-n5-007"]
+    "questionIds": [
+      "particles-n5-007",
+      "particles-n5-048",
+      "particles-n5-049",
+      "particles-n5-050",
+      "particles-n5-051"
+    ]
   },
   {
     "id": "mo-also",
@@ -167,7 +203,13 @@
       },
       { "ja": "わたし も ねこ が すき です。", "de": "Ich mag Katzen auch." }
     ],
-    "questionIds": ["particles-n4-004"]
+    "questionIds": [
+      "particles-n4-004",
+      "particles-n5-052",
+      "particles-n5-053",
+      "particles-n5-054",
+      "particles-n5-055"
+    ]
   },
   {
     "id": "ga-subject",
@@ -178,7 +220,13 @@
       { "ja": "だれ が きますか。", "de": "Wer kommt?" },
       { "ja": "わたし は ねこ が すき です。", "de": "Ich mag Katzen." }
     ],
-    "questionIds": ["particles-n4-001", "particles-n4-002", "translate-n5-008"]
+    "questionIds": [
+      "particles-n4-001",
+      "particles-n4-002",
+      "translate-n5-008",
+      "particles-n5-056",
+      "particles-n5-057"
+    ]
   },
   {
     "id": "ka-question",
@@ -189,7 +237,13 @@
       { "ja": "これは ぺん です か。", "de": "Ist das ein Stift?" },
       { "ja": "ねこ は かわいい です か。", "de": "Sind Katzen süß?" }
     ],
-    "questionIds": ["particles-n5-016", "grammar-n5-021"]
+    "questionIds": [
+      "particles-n5-016",
+      "grammar-n5-021",
+      "particles-n5-058",
+      "particles-n5-059",
+      "particles-n5-060"
+    ]
   },
   {
     "id": "desu",
@@ -231,7 +285,8 @@
       "grammar-n5-020",
       "grammar-n5-022",
       "grammar-n5-023",
-      "translate-n5-004"
+      "translate-n5-004",
+      "grammar-n5-031"
     ]
   },
   {
@@ -250,7 +305,8 @@
       "grammar-n5-026",
       "grammar-n5-027",
       "translate-n5-002",
-      "translate-n5-010"
+      "translate-n5-010",
+      "grammar-n5-032"
     ]
   },
   {
@@ -280,7 +336,13 @@
       { "ja": "とり は ここ に います。", "de": "Der Vogel ist hier." },
       { "ja": "えき は どこ ですか。", "de": "Wo ist der Bahnhof?" }
     ],
-    "questionIds": ["grammar-n5-017", "grammar-n5-018", "grammar-n5-019"]
+    "questionIds": [
+      "grammar-n5-017",
+      "grammar-n5-018",
+      "grammar-n5-019",
+      "grammar-n5-033",
+      "grammar-n5-034"
+    ]
   },
   {
     "id": "ne-yo",
@@ -291,7 +353,13 @@
       { "ja": "いぬ は かわいい です ね。", "de": "Der Hund ist süß, ne?" },
       { "ja": "これは にく です よ。", "de": "Das IST Fleisch!" }
     ],
-    "questionIds": ["grammar-n5-024", "grammar-n5-025"]
+    "questionIds": [
+      "grammar-n5-024",
+      "grammar-n5-025",
+      "grammar-n5-035",
+      "grammar-n5-036",
+      "grammar-n5-037"
+    ]
   },
   {
     "id": "ru-verbs",

@@ -1,0 +1,282 @@
+[
+  {
+    "id": "listening-n5-001",
+    "type": "listen-order",
+    "level": "N5",
+    "tags": ["hoeren", "saetze-bauen"],
+    "question": "Hör zu und baue den Satz nach.",
+    "speech": "わたし は さかな を たべます。",
+    "answer": "わたし は さかな を たべます。",
+    "distractors": ["のみます", "ねこ"],
+    "translation": "Ich esse Fisch.",
+    "explanation": "Achte auf を: さかな を たべます = Fisch essen."
+  },
+  {
+    "id": "listening-n5-002",
+    "type": "listen-order",
+    "level": "N5",
+    "tags": ["hoeren", "saetze-bauen"],
+    "question": "Hör zu und baue den Satz nach.",
+    "speech": "いぬ は にわ に います。",
+    "answer": "いぬ は にわ に います。",
+    "distractors": ["あります", "で"],
+    "translation": "Der Hund ist im Garten.",
+    "explanation": "いぬ ist ein Lebewesen → います, nicht あります."
+  },
+  {
+    "id": "listening-n5-003",
+    "type": "listen-order",
+    "level": "N5",
+    "tags": ["hoeren", "saetze-bauen"],
+    "question": "Hör zu und baue den Satz nach.",
+    "speech": "くるま は くろい です。",
+    "answer": "くるま は くろい です。",
+    "distractors": ["あかい", "ほん"],
+    "translation": "Das Auto ist schwarz.",
+    "explanation": "くろい = schwarz, あかい = rot."
+  },
+  {
+    "id": "listening-n5-004",
+    "type": "listen-order",
+    "level": "N5",
+    "tags": ["hoeren", "saetze-bauen"],
+    "question": "Hör zu und baue den Satz nach.",
+    "speech": "としょかん で べんきょうします。",
+    "answer": "としょかん で べんきょうします。",
+    "distractors": ["に", "へ"],
+    "translation": "Ich lerne in der Bibliothek.",
+    "explanation": "Handlungsort → で. Mit に hieße es: ich gehe in die Bibliothek."
+  },
+  {
+    "id": "listening-n5-005",
+    "type": "listen-order",
+    "level": "N5",
+    "tags": ["hoeren", "saetze-bauen"],
+    "question": "Hör zu und baue den Satz nach.",
+    "speech": "とうきょう へ いきます。",
+    "answer": "とうきょう へ いきます。",
+    "distractors": ["で", "を"],
+    "translation": "Ich gehe nach Tokio.",
+    "explanation": "Bewegungsziel → へ (に wäre ebenfalls richtig)."
+  },
+  {
+    "id": "listening-n5-006",
+    "type": "listen-order",
+    "level": "N5",
+    "tags": ["hoeren", "saetze-bauen"],
+    "question": "Hör zu und baue den Satz nach.",
+    "speech": "これは ぺん じゃない です。",
+    "answer": "これは ぺん じゃない です。",
+    "distractors": ["それ", "でした"],
+    "translation": "Das ist kein Stift.",
+    "explanation": "Nomen-Verneinung: じゃない です."
+  },
+  {
+    "id": "listening-n5-007",
+    "type": "listen-order",
+    "level": "N5",
+    "tags": ["hoeren", "saetze-bauen"],
+    "question": "Hör zu und baue den Satz nach.",
+    "speech": "わたし の なまえ は たなか です。",
+    "answer": "わたし の なまえ は たなか です。",
+    "distractors": ["かれ", "ともだち"],
+    "translation": "Mein Name ist Tanaka.",
+    "explanation": "の verbindet わたし und なまえ."
+  },
+  {
+    "id": "listening-n5-008",
+    "type": "listen-order",
+    "level": "N5",
+    "tags": ["hoeren", "saetze-bauen"],
+    "question": "Hör zu und baue den Satz nach.",
+    "speech": "しちじ に おきます。",
+    "answer": "しちじ に おきます。",
+    "distractors": ["で", "のみます"],
+    "translation": "Ich stehe um 7 Uhr auf.",
+    "explanation": "Zeitpunkt → に."
+  },
+  {
+    "id": "listening-n5-009",
+    "type": "listen-order",
+    "level": "N5",
+    "tags": ["hoeren", "saetze-bauen"],
+    "question": "Hör zu und baue den Satz nach.",
+    "speech": "ともだち と えいが を みます。",
+    "answer": "ともだち と えいが を みます。",
+    "distractors": ["へ", "が"],
+    "translation": "Ich schaue mit einem Freund einen Film.",
+    "explanation": "と = zusammen mit, を markiert den Film (Objekt)."
+  },
+  {
+    "id": "listening-n5-010",
+    "type": "listen-order",
+    "level": "N5",
+    "tags": ["hoeren", "saetze-bauen"],
+    "question": "Hör zu und baue den Satz nach.",
+    "speech": "あそこ に くるま が あります。",
+    "answer": "あそこ に くるま が あります。",
+    "distractors": ["います", "ここ"],
+    "translation": "Dort hinten ist ein Auto.",
+    "explanation": "Existenzort → に, あります für Gegenstände."
+  },
+  {
+    "id": "listening-n5-011",
+    "type": "listen-mc",
+    "level": "N5",
+    "tags": ["hoeren", "verstehen"],
+    "question": "Hör zu und wähle, was auf den Text passt.",
+    "speech": "わたし は あかい くるま が すき です。でも、あかい くるま は たかい です。ですから、くろい くるま を かいます。",
+    "options": [
+      "Die Person kauft am Ende ein schwarzes Auto, weil das rote zu teuer ist.",
+      "Die Person kauft ein rotes Auto.",
+      "Die Person mag keine Autos.",
+      "Das schwarze Auto ist teurer als das rote."
+    ],
+    "answer": "Die Person kauft am Ende ein schwarzes Auto, weil das rote zu teuer ist.",
+    "explanation": "すき です = mögen, でも = aber, たかい = teuer, ですから = deshalb → Ende: くろい くるま を かいます."
+  },
+  {
+    "id": "listening-n5-012",
+    "type": "listen-mc",
+    "level": "N5",
+    "tags": ["hoeren", "verstehen"],
+    "question": "Hör zu und wähle, was auf den Text passt.",
+    "speech": "あした は にちようび です。にちようび に、わたし は ともだち と こうえん へ いきます。",
+    "options": [
+      "Morgen geht die Person mit einem Freund in den Park.",
+      "Heute geht die Person in den Park.",
+      "Die Person geht morgen alleine in die Schule.",
+      "Die Person arbeitet morgen im Garten."
+    ],
+    "answer": "Morgen geht die Person mit einem Freund in den Park.",
+    "explanation": "あした = morgen, にちようび = Sonntag, ともだち と = mit einem Freund, こうえん へ = in den Park."
+  },
+  {
+    "id": "listening-n5-013",
+    "type": "listen-mc",
+    "level": "N5",
+    "tags": ["hoeren", "verstehen"],
+    "question": "Hör zu und wähle, was auf den Text passt.",
+    "speech": "いま は しちじ です。わたし は あさ ごはん を たべます。それから、がっこう へ いきます。",
+    "options": [
+      "Die Person frühstückt zuerst und geht dann zur Schule.",
+      "Die Person geht zuerst zur Schule und isst dann.",
+      "Die Person isst zu Mittag und bleibt zu Hause.",
+      "Es ist 9 Uhr und die Person schläft."
+    ],
+    "answer": "Die Person frühstückt zuerst und geht dann zur Schule.",
+    "explanation": "それから = danach, zuerst あさ ごはん を たべます, dann がっこう へ いきます."
+  },
+  {
+    "id": "listening-n5-014",
+    "type": "listen-mc",
+    "level": "N5",
+    "tags": ["hoeren", "verstehen"],
+    "question": "Hör zu und wähle, was auf den Text passt.",
+    "speech": "わたし の いえ に いぬ が います。いぬ は しろい です。でも、ねこ は いません。",
+    "options": [
+      "Die Person hat einen weißen Hund, aber keine Katze.",
+      "Die Person hat eine weiße Katze und einen Hund.",
+      "Die Person hat keine Tiere.",
+      "Der Hund ist schwarz und die Katze ist weiß."
+    ],
+    "answer": "Die Person hat einen weißen Hund, aber keine Katze.",
+    "explanation": "しろい = weiß, でも = aber, いません = es gibt keine (bei います für Lebewesen)."
+  },
+  {
+    "id": "listening-n5-015",
+    "type": "listen-mc",
+    "level": "N5",
+    "tags": ["hoeren", "verstehen"],
+    "question": "Hör zu und wähle, was auf den Text passt.",
+    "speech": "たけしさん は にほんじん です。めありさん は にほんじん じゃない です。でも、ふたり とも がくせい です。",
+    "options": [
+      "Takeshi und Mary sind beide Studenten, aber nur Takeshi ist Japaner.",
+      "Takeshi und Mary sind beide Japaner.",
+      "Mary ist Studentin, Takeshi nicht.",
+      "Niemand von beiden ist Student."
+    ],
+    "answer": "Takeshi und Mary sind beide Studenten, aber nur Takeshi ist Japaner.",
+    "explanation": "じゃない です = ist nicht, ふたり とも = beide (zusammen)."
+  },
+  {
+    "id": "listening-n5-016",
+    "type": "listen-mc",
+    "level": "N5",
+    "tags": ["hoeren", "verstehen"],
+    "question": "Hör zu und wähle, was auf den Text passt.",
+    "speech": "この ぺん は あかい です。その ぺん は くろい です。わたし は あかい ぺん が すき です。",
+    "options": [
+      "Die Person mag den roten Stift – den, der bei ihr liegt.",
+      "Die Person mag den schwarzen Stift beim Gesprächspartner.",
+      "Beide Stifte sind rot.",
+      "Die Person mag keine Stifte."
+    ],
+    "answer": "Die Person mag den roten Stift – den, der bei ihr liegt.",
+    "explanation": "この = hier bei mir, その = dort bei dir. あかい ぺん = der rote Stift ( hier)."
+  },
+  {
+    "id": "listening-n5-017",
+    "type": "listen-mc",
+    "level": "N5",
+    "tags": ["hoeren", "verstehen"],
+    "question": "Hör zu und wähle, was auf den Text passt.",
+    "speech": "きょう は あめ です。でも、あした は はれ です。ですから、あした えいが を みます。",
+    "options": [
+      "Die Person schaut den Film morgen, weil es heute regnet.",
+      "Die Person schaut den Film heute bei Regen.",
+      "Es regnet die ganze Woche.",
+      "Die Person geht morgen trotz Regen ins Kino."
+    ],
+    "answer": "Die Person schaut den Film morgen, weil es heute regnet.",
+    "explanation": "あめ = Regen, はれ = heiter, ですから = deshalb."
+  },
+  {
+    "id": "listening-n5-018",
+    "type": "listen-mc",
+    "level": "N5",
+    "tags": ["hoeren", "verstehen"],
+    "question": "Hör zu und wähle, was auf den Text passt.",
+    "speech": "わたし は まいあさ くじ に おきます。そして、コーヒー を のみます。でも、ごはん は たべません。",
+    "options": [
+      "Die Person trinkt Kaffee, isst aber nichts.",
+      "Die Person frühstückt ausführlich mit Kaffee.",
+      "Die Person steht um 7 Uhr auf.",
+      "Die Person isst, trinkt aber keinen Kaffee."
+    ],
+    "answer": "Die Person trinkt Kaffee, isst aber nichts.",
+    "explanation": "まいあさ = jeden Morgen, くじ = 9 Uhr, たべません = isst nicht."
+  },
+  {
+    "id": "listening-n5-019",
+    "type": "listen-mc",
+    "level": "N5",
+    "tags": ["hoeren", "verstehen"],
+    "question": "Hör zu und wähle, was auf den Text passt.",
+    "speech": "この かばん は たかい です。でも、あの かばん は やすい です。あの かばん を かいます。",
+    "options": [
+      "Die Person kauft die günstige Tasche – die dort hinten.",
+      "Die Person kauft die teure Tasche von hier.",
+      "Beide Taschen sind teuer.",
+      "Die Person kauft gar keine Tasche."
+    ],
+    "answer": "Die Person kauft die günstige Tasche – die dort hinten.",
+    "explanation": "やすい = günstig, あの = jenes (dort hinten)."
+  },
+  {
+    "id": "listening-n5-020",
+    "type": "listen-mc",
+    "level": "N5",
+    "tags": ["hoeren", "verstehen"],
+    "question": "Hör zu und wähle, was auf den Text passt.",
+    "speech": "すずきさん は がくせい じゃない です。すずきさん は せんせい です。",
+    "options": [
+      "Suzuki ist kein Student, sondern Lehrer.",
+      "Suzuki ist Student und Lehrer.",
+      "Suzuki ist Student.",
+      "Suzuki ist weder Student noch Lehrer."
+    ],
+    "answer": "Suzuki ist kein Student, sondern Lehrer.",
+    "explanation": "がくせい じゃない です = ist kein Student; せんせい です = ist Lehrer."
+  }
+]

@@ -111,14 +111,18 @@ function sanitizeQuestion(raw, moduleId, index) {
     raw.type === "mc" ||
     raw.type === "cloze" ||
     raw.type === "multi" ||
-    raw.type === "listening";
-  const needsAudio = raw.type === "dictation" || raw.type === "listening";
+    raw.type === "listen-order" ||
+    raw.type === "listen-mc";
+  const needsSpeech =
+    raw.type === "dictation" ||
+    raw.type === "listen-order" ||
+    raw.type === "listen-mc";
   if (needsOptions && !Array.isArray(raw.options)) {
     console.warn("Question skipped (" + where + "): missing options.", raw);
     return null;
   }
-  if (needsAudio && !raw.audio) {
-    console.warn("Question skipped (" + where + "): missing audio.", raw);
+  if (needsSpeech && !raw.speech && !raw.audio) {
+    console.warn("Question skipped (" + where + "): missing speech text.", raw);
     return null;
   }
   const q = { ...raw, module: moduleId };

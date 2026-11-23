@@ -402,5 +402,341 @@
     "options": ["は", "を", "の", "に"],
     "answer": "は",
     "explanation": "Bei すき markiert が das Gemochte; わたし ist das Thema → わたし は."
+  },
+  {
+    "id": "particles-n5-033",
+    "type": "mc",
+    "level": "N5",
+    "tags": ["objekt"],
+    "question": "ほん ___ よみます。",
+    "translation": "Ich lese ein Buch.",
+    "options": ["を", "は", "に", "で"],
+    "answer": "を",
+    "explanation": "を markiert das direkte Objekt – das Buch wird gelesen."
+  },
+  {
+    "id": "particles-n5-034",
+    "type": "mc",
+    "level": "N5",
+    "tags": ["objekt", "verwendung"],
+    "question": "Wofür wird das Partikel を verwendet?",
+    "options": [
+      "Es markiert das direkte Objekt eines Verbs",
+      "Es markiert das Thema des Satzes",
+      "Es markiert den Handlungsort",
+      "Es markiert einen Zeitpunkt"
+    ],
+    "answer": "Es markiert das direkte Objekt eines Verbs",
+    "explanation": "を hängt das Objekt ans Verb: ほん を よみます (Buch lesen)."
+  },
+  {
+    "id": "particles-n5-035",
+    "type": "mc",
+    "level": "N5",
+    "tags": ["objekt"],
+    "question": "えいが ___ みます。",
+    "translation": "Ich schaue einen Film.",
+    "options": ["を", "が", "へ", "で"],
+    "answer": "を",
+    "explanation": "Der Film ist das Objekt von みます → を."
+  },
+  {
+    "id": "particles-n5-036",
+    "type": "mc",
+    "level": "N5",
+    "tags": ["objekt"],
+    "question": "ともだち に でんわ ___ かけます。",
+    "translation": "Ich rufe einen Freund an.",
+    "options": ["を", "は", "も", "に"],
+    "answer": "を",
+    "explanation": "でんわ が けます = telefonieren – でんわ ist das Objekt. に gehört zu ともだち (Anrufziel)."
+  },
+  {
+    "id": "particles-n5-037",
+    "type": "mc",
+    "level": "N5",
+    "tags": ["zeit"],
+    "question": "くじ ___ ねます。",
+    "translation": "Ich gehe um 9 Uhr schlafen.",
+    "options": ["に", "で", "を", "へ"],
+    "answer": "に",
+    "explanation": "Konkrete Uhrzeit → に: くじ に ねます."
+  },
+  {
+    "id": "particles-n5-038",
+    "type": "mc",
+    "level": "N5",
+    "tags": ["zeit"],
+    "question": "にちようび ___ こうえん へ いきます。",
+    "translation": "Ich gehe am Sonntag in den Park.",
+    "options": ["に", "で", "を", "と"],
+    "answer": "に",
+    "explanation": "Wochentage sind konkrete Zeitpunkte → に."
+  },
+  {
+    "id": "particles-n5-039",
+    "type": "mc",
+    "level": "N5",
+    "tags": ["zeit", "verwendung"],
+    "question": "Bei welchem Zeitwort steht KEIN に?",
+    "options": [
+      "きょう (heute)",
+      "しちじ (7 Uhr)",
+      "さんがつ (März)",
+      "どようび (Samstag)"
+    ],
+    "answer": "きょう (heute)",
+    "explanation": " Relative Angaben wie きょう (heute) oder まいあさ (jeden Morgen) stehen OHNE に – Uhrzeiten, Monate und Wochentage MIT に."
+  },
+  {
+    "id": "particles-n5-040",
+    "type": "mc",
+    "level": "N5",
+    "tags": ["ort"],
+    "question": "うち ___ ばんごはん を たべます。",
+    "translation": "Ich esse zu Abend zu Hause.",
+    "options": ["で", "に", "を", "へ"],
+    "answer": "で",
+    "explanation": "Handlungsort (essen passiert dort) → で."
+  },
+  {
+    "id": "particles-n5-041",
+    "type": "mc",
+    "level": "N5",
+    "tags": ["ort"],
+    "question": "カフェ ___ コーヒー を のみます。",
+    "translation": "Ich trinke Kaffee im Café.",
+    "options": ["で", "に", "を", "へ"],
+    "answer": "で",
+    "explanation": "Das Trinken passiert im Café → で. に hieße: ich gehe ins Café."
+  },
+  {
+    "id": "particles-n5-042",
+    "type": "mc",
+    "level": "N5",
+    "tags": ["richtung"],
+    "question": "えき ___ いきます。",
+    "translation": "Ich gehe zum Bahnhof.",
+    "options": ["へ", "で", "を", "と"],
+    "answer": "へ",
+    "explanation": "Bewegungsziel → へ (に wäre ebenfalls richtig)."
+  },
+  {
+    "id": "particles-n5-043",
+    "type": "mc",
+    "level": "N5",
+    "tags": ["richtung", "verwendung"],
+    "question": "Wofür wird das Partikel へ verwendet?",
+    "options": [
+      "Ziel oder Richtung einer Bewegung",
+      "Ort, an dem eine Handlung stattfindet",
+      "direktes Objekt eines Verbs",
+      "Zeitpunkt einer Handlung"
+    ],
+    "answer": "Ziel oder Richtung einer Bewegung",
+    "explanation": "へ zeigt, wohin es geht: えき へ いきます. Handlungsort = で."
+  },
+  {
+    "id": "particles-n5-044",
+    "type": "mc",
+    "level": "N5",
+    "tags": ["begleitung"],
+    "question": "はは ___ かいもの に いきます。",
+    "translation": "Ich gehe mit meiner Mutter einkaufen.",
+    "options": ["と", "を", "の", "へ"],
+    "answer": "と",
+    "explanation": "と = zusammen mit + Person: はは と = mit der Mutter."
+  },
+  {
+    "id": "particles-n5-045",
+    "type": "mc",
+    "level": "N5",
+    "tags": ["begleitung", "aufzaehlung"],
+    "question": "ぺん ___ ほん を かいます。",
+    "translation": "Ich kaufe einen Stift und ein Buch.",
+    "options": ["と", "を", "の", "も"],
+    "answer": "と",
+    "explanation": "と verbindet hier zwei Nomen: ぺん と ほん = Stift und Buch."
+  },
+  {
+    "id": "particles-n5-046",
+    "type": "mc",
+    "level": "N5",
+    "tags": ["verwendung"],
+    "question": "Wofür wird das Partikel と verwendet?",
+    "options": [
+      "zusammen mit (Person) / und (zwischen zwei Nomen)",
+      "Zugehörigkeit zwischen zwei Nomen",
+      "Zeitpunkt einer Handlung",
+      "„auch“"
+    ],
+    "answer": "zusammen mit (Person) / und (zwischen zwei Nomen)",
+    "explanation": "と = mit + Person (ともだち と) und „und“ (ぺん と ほん). Zugehörigkeit = の, auch = も."
+  },
+  {
+    "id": "particles-n5-047",
+    "type": "mc",
+    "level": "N5",
+    "tags": ["begleitung"],
+    "question": "だれ ___ あそびます か。",
+    "translation": "Mit wem spielst du?",
+    "options": ["と", "を", "に", "は"],
+    "answer": "と",
+    "explanation": "だれ と = mit wem – die Begleitperson steht mit と."
+  },
+  {
+    "id": "particles-n5-048",
+    "type": "mc",
+    "level": "N5",
+    "tags": ["startpunkt"],
+    "question": "がっこう ___ うち まで あるきます。",
+    "translation": "Ich laufe von der Schule bis nach Hause.",
+    "options": ["から", "より", "を", "に"],
+    "answer": "から",
+    "explanation": "から = Startpunkt (von der Schule), まで = bis (nach Hause)."
+  },
+  {
+    "id": "particles-n5-049",
+    "type": "mc",
+    "level": "N5",
+    "tags": ["startpunkt", "zeit"],
+    "question": "さんじ ___ ごじ まで べんきょうします。",
+    "translation": "Ich lerne von 3 bis 5 Uhr.",
+    "options": ["から", "まで", "に", "で"],
+    "answer": "から",
+    "explanation": "から…まで funktioniert auch für Zeiten: von 3 Uhr bis 5 Uhr."
+  },
+  {
+    "id": "particles-n5-050",
+    "type": "mc",
+    "level": "N5",
+    "tags": ["startpunkt"],
+    "question": "えき ___ こうえん まで さんぽ します。",
+    "translation": "Ich spaziere vom Bahnhof bis zum Park.",
+    "options": ["から", "より", "を", "へ"],
+    "answer": "から",
+    "explanation": "Startpunkt (えき) → から, Ende (こうえん) → まで."
+  },
+  {
+    "id": "particles-n5-051",
+    "type": "mc",
+    "level": "N5",
+    "tags": ["verwendung"],
+    "question": "Was bedeutet die Kombination から … まで?",
+    "options": [
+      "von … bis (Start und Ende)",
+      "zusammen mit … und",
+      "trotz … trotzdem",
+      "wegen … deshalb"
+    ],
+    "answer": "von … bis (Start und Ende)",
+    "explanation": "から = von (Start), まで = bis (Ende) – für Orte und Zeiten."
+  },
+  {
+    "id": "particles-n5-052",
+    "type": "mc",
+    "level": "N5",
+    "tags": ["auch"],
+    "question": "たけしさん は にほんじん です。\nわたし ___ にほんじん です。",
+    "translation": "Herr Takeshi ist Japaner. Ich bin auch Japaner.",
+    "options": ["も", "は", "が", "を"],
+    "answer": "も",
+    "explanation": "も („auch“) ersetzt は: わたし も = ich auch."
+  },
+  {
+    "id": "particles-n5-053",
+    "type": "mc",
+    "level": "N5",
+    "tags": ["auch"],
+    "question": "これは りんご です。それ ___ りんご です。",
+    "translation": "Das ist ein Apfel. Das ist auch ein Apfel.",
+    "options": ["も", "は", "の", "が"],
+    "answer": "も",
+    "explanation": "Zweite gleichartige Aussage → も statt は."
+  },
+  {
+    "id": "particles-n5-054",
+    "type": "mc",
+    "level": "N5",
+    "tags": ["auch", "verwendung"],
+    "question": "Wofür wird das Partikel も verwendet?",
+    "options": [
+      "„auch“ – ersetzt は oder が",
+      "„und“ – verbindet zwei Nomen",
+      "„von … bis“",
+      "„trotzdem“"
+    ],
+    "answer": "„auch“ – ersetzt は oder が",
+    "explanation": "も steht an der Stelle von は/が: すずきさん も がくせい です."
+  },
+  {
+    "id": "particles-n5-055",
+    "type": "mc",
+    "level": "N5",
+    "tags": ["auch"],
+    "question": "いぬ が すき です。ねこ ___ すき です。",
+    "translation": "Ich mag Hunde. Katzen mag ich auch.",
+    "options": ["も", "を", "に", "は"],
+    "answer": "も",
+    "explanation": "Zweite Aussage über ein gleiches Prädikat (すき) → も."
+  },
+  {
+    "id": "particles-n5-056",
+    "type": "mc",
+    "level": "N5",
+    "tags": ["subjekt", "natur"],
+    "question": "かぜ ___ ふいて います。",
+    "translation": "Es weht Wind.",
+    "options": ["が", "は", "を", "に"],
+    "answer": "が",
+    "explanation": "Naturphänomene (Wind, Regen, Schnee) → Subjekt mit が: かぜ が ふきます."
+  },
+  {
+    "id": "particles-n5-057",
+    "type": "mc",
+    "level": "N5",
+    "tags": ["subjekt", "natur", "frage"],
+    "question": "あめ ___ ふって います か。",
+    "translation": "Regnet es?",
+    "options": ["が", "は", "を", "へ"],
+    "answer": "が",
+    "explanation": "Wie bei あめ が ふります: das Naturphänomen ist Subjekt → が."
+  },
+  {
+    "id": "particles-n5-058",
+    "type": "mc",
+    "level": "N5",
+    "tags": ["frage"],
+    "question": "それは ほん ___。",
+    "translation": "Ist das ein Buch?",
+    "options": ["か", "ね", "よ", "な"],
+    "answer": "か",
+    "explanation": "か am Satzende = Ja/Nein-Frage. ね würde Zustimmung suchen, よ würde etwas betonen."
+  },
+  {
+    "id": "particles-n5-059",
+    "type": "mc",
+    "level": "N5",
+    "tags": ["frage"],
+    "question": "もう おひるごはん を たべました ___。",
+    "translation": "Hast du schon zu Mittag gegessen?",
+    "options": ["か", "ね", "よ", "も"],
+    "answer": "か",
+    "explanation": "Echte Frage → か. �ね wäre „…, ne?“ und よ „…!“ – beides keine echte Frage."
+  },
+  {
+    "id": "particles-n5-060",
+    "type": "mc",
+    "level": "N5",
+    "tags": ["frage", "verwendung"],
+    "question": "Wie stellt man eine Ja/Nein-Frage im Japanischen?",
+    "options": [
+      "か am Satzende – die Wortstellung bleibt gleich",
+      "か direkt hinter das Verb",
+      "Wortstellung umdrehen wie im Deutschen",
+      "よ am Satzende"
+    ],
+    "answer": "か am Satzende – die Wortstellung bleibt gleich",
+    "explanation": "Japanisch fragt man, indem man か anhängt: それは ほん です か. Nichts sonst verschiebt sich."
   }
 ]
