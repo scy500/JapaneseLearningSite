@@ -6,9 +6,6 @@
 // ------------------------------------------------------------
 
 function Listening({ question, selected, onSelect }) {
-  const [plays, setPlays] = React.useState(0);
-  const answered = selected !== null && selected !== undefined;
-
   function play() {
     // Prefer the explicit speech text; fall back to the answer
     // (listen-order questions speak the sentence to rebuild).
@@ -17,7 +14,6 @@ function Listening({ question, selected, onSelect }) {
       (Array.isArray(question.answer) ? question.answer[0] : question.answer);
     if (!text) return;
     speakJapanese(text);
-    setPlays((p) => p + 1);
   }
 
   return (
@@ -26,11 +22,6 @@ function Listening({ question, selected, onSelect }) {
         <button type="button" className="btn btn-primary" onClick={play}>
           ▶ Anhören
         </button>
-        {plays > 0 && (
-          <span className="listening-hint">
-            {plays}× abgespielt – ruhig nochmal hören, wenn nötig
-          </span>
-        )}
       </div>
 
       {question.type === "listen-order" ? (
